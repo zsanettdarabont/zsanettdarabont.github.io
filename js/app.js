@@ -46,7 +46,7 @@ const RecipeBox = (() => {
       root.append(el('p', {}, 'Recipe not found. ', el('a', { href: './' }, 'Back to all recipes')));
       return;
     }
-    document.title = `${r.name} · Zsanett's Recipe Box`;
+    document.title = `${r.name} · Zsanett's Kitchen`;
 
     const ingredients = el('ul', { class: 'ingredients' }, ...r.ingredients.map((text, i) =>
       el('li', {}, el('label', {}, el('input', { type: 'checkbox', id: `ing-${i}` }), el('span', {}, text)))));
