@@ -189,7 +189,11 @@ def save_image(recipe):
     """Download the dish photo so the site doesn't hotlink other websites."""
     if not recipe["image"]:
         return None
-    body, content_type = fetch(recipe["image"])
+    try:
+        body, content_type = fetch(recipe["image"])
+    except Exception as exc:
+        print(f"warn  couldn't download photo ({exc}); linking to it instead", file=sys.stderr)
+        return recipe["image"]
     ext = {"image/png": ".png", "image/webp": ".webp", "image/avif": ".avif"}.get(
         content_type, ".jpg"
     )
