@@ -1,4 +1,4 @@
-# Zsanett's Recipe Box
+# Zsanett's Kitchen
 
 A static GitHub Pages site showing the recipes Zsanett cooks most: a grid of square photo cards, each opening a clean recipe page with just the ingredients and instructions.
 
