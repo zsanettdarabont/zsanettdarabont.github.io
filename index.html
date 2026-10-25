@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zsanett's Recipe Box</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./">Zsanett's Recipe Box</a>
+    <p class="tagline">The recipes I cook again and again.</p>
+  </header>
+  <main class="wrap">
+    <input id="search" class="search" type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes">
+    <ul id="grid" class="grid" aria-live="polite"></ul>
+  </main>
+  <script src="js/app.js?v=1"></script>
+  <script>RecipeBox.renderGrid();</script>
+</body>
+</html>
