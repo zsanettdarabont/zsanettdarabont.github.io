@@ -1,0 +1,84 @@
+# Adds a recipe from a link. Triggered by the iPhone "Add to Zsanett's Kitchen"
+# shortcut (see README) or by hand from the Actions tab.
+name: Add recipe
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Recipe link (or any text containing one)
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: add-recipe
+  cancel-in-progress: false
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Find the link
+        id: link
+        env:
+          INPUT: ${{ inputs.url }}
+        run: |
+          url=$(printf '%s' "$INPUT" | grep -oE 'https?://[^[:space:]"<>]+' | head -1 || true)
+          if [ -z "$url" ]; then
+            echo "::error::No link found in: $INPUT"
+            exit 1
+          fi
+          echo "Recipe link: $url"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+
+      - name: Extract recipe
+        id: plain
+        continue-on-error: true
+        env:
+          URL: ${{ steps.link.outputs.url }}
+        run: python3 scripts/extract_recipes.py "$URL"
+
+      - name: Retry in Chrome (for sites that block scripts)
+        id: chrome
+        if: steps.plain.outcome == 'failure'
+        continue-on-error: true
+        env:
+          URL: ${{ steps.link.outputs.url }}
+        run: |
+          pip install --quiet playwright
+          python3 -m playwright install --with-deps chrome
+          command -v xvfb-run || sudo apt-get install -y xvfb
+          xvfb-run -a python3 scripts/extract_recipes.py "$URL"
+
+      - name: Save and publish
+        env:
+          URL: ${{ steps.link.outputs.url }}
+        run: |
+          grep -qxF "$URL" recipes.txt || echo "$URL" >> recipes.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add recipes.txt data images
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+          else
+            git commit -m "Add recipe: $URL"
+            git pull --rebase --autostash
+            git push
+          fi
+
+      - name: Report a failed extraction
+        if: steps.plain.outcome == 'failure' && steps.chrome.outcome != 'success'
+        env:
+          URL: ${{ steps.link.outputs.url }}
+        run: |
+          echo "::error::Couldn't read a recipe from $URL. The link was saved to recipes.txt; run 'python3 scripts/extract_recipes.py' on your Mac to add it."
+          exit 1
