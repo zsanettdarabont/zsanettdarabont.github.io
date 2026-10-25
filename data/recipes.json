@@ -126,5 +126,46 @@
         ]
       }
     ]
+  },
+  {
+    "id": "creamy-tuscan-salmon-recipe",
+    "name": "Creamy Tuscan Salmon Recipe",
+    "source": "https://carlsbadcravings.com/tuscan-salmon/",
+    "image": "images/creamy-tuscan-salmon-recipe.jpg",
+    "ingredients": [
+      "4 6-8 oz. skinless salmon fillets",
+      "2 1/2 tablespoons flour",
+      "1 tsp EACH salt, garlic powder, onion powder",
+      "1/2 tsp EACH pepper, paprika",
+      "2-3 tablespoons olive oil",
+      "1 tablespoon unsalted butter",
+      "1 tablespoon oil from sun-dried tomatoes",
+      "1 pint cherry tomatoes ( halved)",
+      "1/2 cup sun-dried tomatoes (rinsed, drained, roughly chopped)",
+      "1 shallot (minced)",
+      "4 cloves garlic (minced)",
+      "pinch-1/4 teaspoon red pepper flakes",
+      "1 1/2 cups low sodium chicken broth",
+      "1 tablespoon cornstarch",
+      "1 cup heavy cream (or evaporated milk + 1 tsp cornstarch)",
+      "1 tsp EACH dried parsley, dried basil (or 1 TBS EACH FRESH)",
+      "1/2 teaspoon dried oregano",
+      "1/4 cup finely grated fresh Parmesan cheese",
+      "Salt and pepper to taste",
+      "2 cups baby spinach (optional)"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Pat fillets dry with paper towels. Whisk flour and salmon seasonings together in a small bowl/plate. Add salmon and season all sides. Shake off excess flour.",
+          "Heat 2-3 tablespoons olive oil in a large skillet over medium-high heat. Once hot, add salmon and cook for 3-4 minutes, or until golden brown on the bottom. Flip salmon over, reduce heat to medium and cook an additional 3-4 minutes, or to desired doneness, then remove to a plate. Don’t wipe out the skillet.",
+          "Melt butter with one tablespoon oil from sun-dried tomatoes jar over medium heat with the drippings in the pan. Once hot, add cherry tomatoes, sun-dried tomatoes and shallots; sauté until shallots are softened, about 2 minutes. Add garlic and red pepper flakes and sauté 30 seconds. Reduce heat to low and stir in heavy cream; mix chicken broth with cornstarch and add to the skillet. Stir in parsley, basil and oregano.",
+          "Bring sauce to a simmer while scraping up any brown bits on the bottom of the pan; simmer until sauce thickens to desired consistency, stirring often.",
+          "Once thickened, reduce heat to medium-low and stir in Parmesan cheese. Cook, while stirring until melted, 1-2 minutes. Season with salt and pepper to taste (I use about 1/8 teaspoon each). Stir spinach into the sauce and cook 1-2 minutes, just until wilted.",
+          "Add salmon to the skillet and warm through to soak up the sauce. Garnish with fresh parsley if desired"
+        ]
+      }
+    ]
   }
 ]
