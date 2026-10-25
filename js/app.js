@@ -150,21 +150,14 @@ const RecipeBox = (() => {
           remove);
       }));
 
-      const items = {};
-      for (const r of chosen) {
-        allIngredients(r).forEach((text, i) => {
-          const aisle = Aisles.aisleFor(text);
-          if (aisle) (items[aisle] ||= []).push({ key: `${r.id}:${i}`, text, from: r.name });
-        });
-      }
-      const keys = new Set(Object.values(items).flat().map(x => x.key));
+      const aisles = Aisles.shoppingList(chosen);
+      const keys = new Set(aisles.flatMap(([, list]) => list.map(x => x.key)));
       const checked = new Set(store.get('zk-checked', []).filter(k => keys.has(k)));
       store.set('zk-checked', [...checked]);
 
       const shopping = el('div', { class: 'shopping' });
-      for (const aisle of Aisles.ORDER) {
-        if (!items[aisle]) continue;
-        shopping.append(el('h3', {}, aisle), el('ul', { class: 'ingredients' }, ...items[aisle].map(item => {
+      for (const [aisle, list] of aisles) {
+        shopping.append(el('h3', {}, aisle), el('ul', { class: 'ingredients' }, ...list.map(item => {
           const box = el('input', { type: 'checkbox' });
           box.checked = checked.has(item.key);
           box.addEventListener('change', () => {
@@ -172,7 +165,7 @@ const RecipeBox = (() => {
             store.set('zk-checked', [...checked]);
           });
           return el('li', {}, el('label', {}, box,
-            el('span', {}, item.text, el('small', { class: 'from' }, item.from))));
+            el('span', {}, item.name, el('small', { class: 'from' }, item.from.join(' · ')))));
         })));
       }
 
