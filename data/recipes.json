@@ -167,5 +167,429 @@
         ]
       }
     ]
+  },
+  {
+    "id": "orzo-pasta-salad-recipe-with-feta",
+    "name": "Orzo Pasta Salad Recipe with Feta",
+    "source": "https://carlsbadcravings.com/orzo-pasta-salad/",
+    "image": "images/orzo-pasta-salad-recipe-with-feta.jpg",
+    "ingredients": [
+      "16 oz. uncooked orzo pasta",
+      "2 tablespoon olive oil",
+      "1 tablespoon unsalted butter",
+      "4 1/4 cups low sodium chicken broth",
+      "1/4 cup lemon juice",
+      "1/4 tsp EACH salt, pepper",
+      "1/2 red onion (chopped)",
+      "2 ears grilled corn, cut off the cob (grilling optional but recommended – see notes)",
+      "1 English cucumber (sliced and quartered)",
+      "1 red bell pepper, chopped",
+      "1 pint cherry tomatoes ( halved)",
+      "1 15 oz. can garbanzo beans {chickpeas} (drained and rinsed)",
+      "1/2 cup pitted Kalamata olives (halved)",
+      "1/2 cup sliced almonds",
+      "1/2 cup fresh basil (chopped )",
+      "1/2 cup feta",
+      "1/3 cup extra virgin olive oil",
+      "2 tablespoons red wine vinegar",
+      "1 tablespoon lemon juice",
+      "1 TBS EACH fresh dill parsley, oregano ( OR 1 tsp EACH dried)",
+      "1 teaspoon sugar",
+      "1 teaspoon Dijon mustard",
+      "1/2 teaspoon garlic powder",
+      "1/4 tsp EACH pepper, salt"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Make dressing by adding all of the ingredients to either a small bowl and whisking or a jar and shaking. Refrigerate until ready to use.",
+          "In a large nonstick skillet, melt butter with olive oil over medium-low heat. Once melted, increase heat to medium-high and add orzo and red onions and sauté for 3-5 minutes, until red onion are soft.",
+          "Stir in chicken broth, lemon juice salt and pepper. Simmer until orzo is al dente, 8-10 minutes, stirring frequently the last couple minutes of cooking so it doesn’t burn. If you have leftover liquid, drain orzo. Transfer to a large bowl to cool in the refrigerator while you finish chopping your veggies.",
+          "Add all of the salad ingredients to the orzo followed by the dressing. Toss to coat.",
+          "Taste and season with additional lemon juice or salt and pepper to taste."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the-best-chicken-parmesan-parmigiana",
+    "name": "The Best Chicken Parmesan (Parmigiana)",
+    "source": "https://asimplepalate.com/blog/chicken-parmigiana/",
+    "image": "images/the-best-chicken-parmesan-parmigiana.jpg",
+    "ingredients": [
+      "3 chicken breasts, (sliced in half length-wise to create 6 cutlets)",
+      "1/2 cup all-purpose flour (can also use gluten-free flour blend or white whole wheat)",
+      "3 eggs, whisked",
+      "1/3 cup olive oil",
+      "1 1/2 cups breadcrumbs",
+      "1/2 cup freshly grated & finely grated Parmigiano Reggiano, shredded",
+      "1/2 tsp (each) salt & pepper",
+      "2 tsp Italian herb blend (thyme, oregano, basil, rosemary)",
+      "1 tsp garlic powder",
+      "6 slices Mozzarella",
+      "1 1/2 cups marinara sauce",
+      "1/3 cup Freshly grated Parmigiano Reggiano",
+      "2 tbsp fresh basil, chopped"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Preheat oven to 425F",
+          "Tenderize chicken: place chicken cutlets/breasts in a large ziplock bag or between two sheets of plastic wrap. Firmly pound with a rolling pin or the smooth side of a meat hammer (chicken thickness should be 1/2 inch). After tenderizing, pat them dry with paper towels.",
+          "Breadcrumbs: In a shallow dish, mix all of breadcrumb ingredients together.",
+          "Assembly line: Set up a line of shallow bowls/dishes with flour, whisked eggs, and breadcrumbs. Add a pinch of salt to both the flour and whisked eggs.",
+          "Bread the chicken: First, coat the chicken on both sides in the flour, then shake off any excess flour that isn't sticking. Transfer to whisked eggs, dipping both sides of the chicken. Then dip into the breadcrumbs. Use your hands to gently pack the breadcrumbs onto each side of the chicken. Transfer the finished cutlet to a sheetpan lined with parchment paper. Repeat until all the cutlets have been breaded.",
+          "Brown the chicken: Heat a cast-iron skillet on LOW to MEDIUM heat. Then add 3 Tablespoons of good-quality cooking olive oil and brown chicken for about 2 to 3 minutes on both sides until the breading is golden. Do this in batches until all the cutlets are browned, adding more oil to the pan as needed.",
+          "Layer and bake: arrange the browned cutlets in a large metal baking dish or on a sheet pan. Layer first with mozzarella slices, a spoonful of tomato sauce over top, and a generous dusting of freshly grated Parmigiano Reggiano. Bake uncovered in the oven for 10-14 minutes - the bake time will largely depend on the thickness of your chicken cutlets. For thinner/smaller cutlets, aim for 10 minutes; for thicker cutlets, 14 minutes. Broil for the last minute of your bake time to melt the cheese and get a nice browning on top."
+        ]
+      },
+      {
+        "name": "Instructions for Baked Chicken Parmesan",
+        "steps": [
+          "If you would like to use less oil, use this baking method instead! I love making chicken parmesan this way and the results are almost identical to pan-frying. Baked method: preheat oven to 450F. Follow steps 2-5 above, then after breading the chicken, lay the cutlets on a pan lined with parchment paper. Spray the chicken with olive oil, or brush with 2 Tablespoons of olive oil. Bake for 20-25 minutes, if you feel the bottom is cooking too fast you can flip the chicken halfway through the bake time. Then remove from oven and layer each cutlet with mozzarella, sauce, and Parmigiano and bake for 5 additional minutes. Broil on HIGH for the last minute for the cheese to brown. Serve with fresh basil!"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "skillet-chicken-fajitas",
+    "name": "Skillet Chicken Fajitas",
+    "source": "https://carlsbadcravings.com/chicken-fajitas-recipe/",
+    "image": "images/skillet-chicken-fajitas.jpg",
+    "ingredients": [
+      "2 large chicken breasts (sliced horizontally to create 4 fillets (1 1/2 pounds))",
+      "1/2 red onion, thinly sliced",
+      "3 bell peppers, thinly sliced (any mix of colors)",
+      "8-12 flour tortillas",
+      "2 tablespoons olive oil",
+      "3 tablespoons brown sugar",
+      "2 tablespoons orange juice",
+      "2 tablespoons lime juice",
+      "2 tablespoons reduced sodium soy sauce",
+      "1 tablespoon Dijon mustard",
+      "1 tablespoon chili powder",
+      "1 1/2 teaspoons ground cumin",
+      "1 tsp EACH garlic pwdr, onion pwdr, salt",
+      "1/2 tsp EACH smoked paprika, chipotle chili pwdr, dried oregano",
+      "1/4 teaspoon pepper",
+      "2 teaspoons liquid smoke",
+      "1 cup sour cream",
+      "2 tablespoons mayonnaise",
+      "1-2 tablespoons lime juice, to taste",
+      "1/2 teaspoon salt",
+      "1/4 - 1/2 teaspoon chipotle chili powder",
+      "1/4 cup packed cilantro, finely chopped",
+      "cheese",
+      "Guacamole/chopped avocados",
+      "Recipe Avocado Crema (my FAV!)",
+      "salsa",
+      "Chopped tomatoes",
+      "black beans",
+      "cilantro",
+      "Freshly squeezed lime juice"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "MARINADE: In a large freezer bag, whisk together all of the Chicken Fajita Marinade ingredients. Remove 2 tablespoons to use later for vegetables. Add chicken to freezer bag and toss to coat. Marinate in the refrigerator 6 hours up to overnight (longer the better).",
+          "CHIPOTLE LIME CREMA (optional): Whisk together all of the ingredients. Refrigerate in an airtight container until ready to use.",
+          "CHICKEN: When ready to cook, let chicken sit at room temperature for 15-30 minutes. Heat 1 tablespoon olive oil in a large skillet over medium high heat. Once very hot, dab excess marinade off chicken and add to skillet. Cook chicken undisturbed for 2-3 minutes, or until nicely browned (or blackened if you prefer) on one side. Turn chicken over, cover, and reduce heat to medium. Cook for approximately 2-4 more minutes (depending on thickness of chicken), or until chicken is cooked through. Remove to a cutting board, tent with foil and let rest 5 minutes before slicing across the grain into strips.",
+          "VEGETABLES: Meanwhile, Add 1 tablespoon oil to the leftover juices in the skillet along with reserved 2 tablespoons marinade. Heat over medium high heat. Add onions and saute 1 minute. Add bell peppers and saute for 3-4 minutes or until crisp-tender. Add sliced chicken and toss to coat.",
+          "ASSEMBLE: Layer tortillas with Chicken Fajita mixture and desired toppings. Top with Chipotle Lime Crema."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "authentic-birria",
+    "name": "Authentic Birria",
+    "source": "https://www.isabeleats.com/authentic-birria/",
+    "image": "images/authentic-birria.jpg",
+    "ingredients": [
+      "4 to 5 pounds chuck roast, (cut into large 4-inch chunks)",
+      "½ tablespoon kosher salt, (plus more to taste )",
+      "½ tablespoon black pepper",
+      "1 ½ tablespoon olive oil",
+      "12 guajillo chiles, (rinsed, stemmed, and seeded (about 2.5 oz))",
+      "5 ancho chiles, (rinsed, stemmed, and seeded (about 2 oz))",
+      "5 árbol chiles, (rinsed and stemmed (about 0.1 oz))",
+      "2 large Roma tomatoes",
+      "½ medium yellow onion",
+      "1 4-inch Mexican cinnamon stick*",
+      "3 bay leaves",
+      "½ teaspoon whole black peppercorns",
+      "water, (as needed)",
+      "2 cups beef broth",
+      "¼ cup distilled white vinegar",
+      "5 cloves garlic",
+      "1 teaspoon ground cumin",
+      "1 teaspoon dried Mexican oregano*",
+      "½ teaspoon ground cloves"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Generously season the meat with salt and pepper on all sides, and heat the olive oil in a large pot or Dutch oven over medium-high heat.",
+          "Working in 2 batches, add the meat and sear on all sides until browned. Remove the pot from the heat, add the seared meat back into the pot, and set aside.",
+          "While the meat is searing, add the guajillo chiles, ancho chiles, arbol chiles, tomatoes, onion, cinnamon stick, bay leaves, and peppercorns to a medium pot. Cover completely with water and bring to a boil over high heat. Reduce the heat to low, cover, and cook for 10 minutes.",
+          "Using a slotted spoon, transfer the softened chiles and all the other ingredients to a large blender.",
+          "Add 1 cup of the chile-soaked cooking water, the beef broth, white vinegar, garlic, cumin, oregano, and cloves. Blend on high for a few minutes until completely smooth. (You may have to do this in 2 batches if your blender isn’t big enough.)",
+          "Strain the blended sauce through a fine mesh strainer into the pot with the seared meat. Discard any solids left behind.",
+          "Stir the meat and chile sauce together to combine and bring to a boil over high heat. Reduce the heat to low, cover, and simmer for 3 to 3 ½ hours until the meat is fall-apart tender. If the meat isn’t tender after that time, keep simmering and check every 30 minutes. Taste the consomé and season with more salt as needed.",
+          "Transfer the meat to a large bowl and shred it with 2 forks. Add the meat back into the consomé and serve as a stew in bowls with diced onion and chopped cilantro or as tacos in corn tortillas with shredded Oaxaca cheese, cilantro, and diced onions."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "seriously-the-best-healthy-turkey-chili",
+    "name": "Seriously, The Best Healthy Turkey Chili",
+    "source": "https://www.ambitiouskitchen.com/seriously-the-best-healthy-turkey-chili/",
+    "image": "images/seriously-the-best-healthy-turkey-chili.webp",
+    "ingredients": [
+      "2 teaspoons olive oil",
+      "1 yellow onion, chopped",
+      "3 garlic cloves, minced",
+      "1 medium red bell pepper, chopped",
+      "1 pound extra lean ground turkey or chicken (99%)",
+      "4 tablespoons chili powder* (I used McCormick chili powder, which is very mild. Do not use spicy chili powder, and if using a different brand, start with 2 tablespoons)",
+      "2 teaspoons ground cumin",
+      "1 teaspoon dried oregano",
+      "1/4 teaspoon cayenne pepper",
+      "1/2 teaspoon salt, plus more to taste",
+      "1 (28-ounce) can diced tomatoes or crushed tomatoes",
+      "1 1/4 cups chicken broth",
+      "2 (15 oz) cans dark red kidney beans, rinsed and drained",
+      "1 (15 oz) can sweet corn, rinsed and drained",
+      "For topping: cheese, avocado, tortilla chips, cilantro, sour cream"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Place oil in a large pot and place over medium high heat. Add in onion, garlic and red pepper and saute for 5-7 minutes, stirring frequently.",
+          "Add in ground turkey and break up the meat; cooking until no longer pink. Next add in chili powder, cumin, oregano, cayenne pepper and salt; stir for about 20 seconds.",
+          "Next add in tomatoes, chicken broth, kidney beans and corn. Bring to a boil, then reduce heat and simmer for 30-45 minutes or until chili thickens and flavors come together. Taste and adjust seasonings and salt as necessary.",
+          "Garnish with anything you'd like. Makes 6 servings, about 1 1/2 cups each."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "thai-green-curry",
+    "name": "Thai Green Curry",
+    "source": "https://www.loveandlemons.com/thai-green-curry/",
+    "image": "images/thai-green-curry.jpg",
+    "ingredients": [
+      "2 tablespoons coconut oil",
+      "2 medium Chinese or Japanese eggplants (cut into ½-inch-thick half-moons)",
+      "Sea salt",
+      "1 (13.5-ounce) can full-fat coconut milk",
+      "¼ cup Thai green curry paste",
+      "1 tablespoon fresh ginger matchsticks",
+      "1 cup water",
+      "7 ounces extra-firm tofu (cubed (raw, baked, or fried—I like to use store-bought fried tofu))",
+      "1 red bell pepper (stemmed, seeded, and sliced)",
+      "4 ounces snow peas",
+      "2 Fresno chiles or 4 Thai chiles (thinly sliced)",
+      "1 tablespoon fresh lime juice",
+      "1 teaspoon sugar (optional)",
+      "Tamari (to taste, optional)",
+      "Thai basil or fresh cilantro (for garnish)",
+      "Cooked rice (for serving)"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Heat the coconut oil in a medium skillet or Dutch oven over medium heat. Add the eggplant and a pinch of salt and cook, stirring occasionally, for 5 to 7 minutes, or until softened. Remove from the pan and set aside.",
+          "Return the pan to medium heat and add ¼ cup of the coconut milk, the curry paste, and ginger. Sizzle for 2 to 3 minutes, or until the curry paste mostly dries out. Add the remaining coconut milk and the water and stir to combine.",
+          "Add the tofu, red pepper, snow peas, sautéed eggplant, and half the chiles and stir to combine. Simmer for 3 to 5 minutes, or until the snow peas are tender.",
+          "Remove from the heat and add the lime juice. Season to taste, adding the sugar and tamari, if desired.",
+          "Garnish with the remaining chiles and herbs and serve with rice."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shawarma-chicken",
+    "name": "Shawarma Chicken",
+    "source": "https://carlsbadcravings.com/chicken-shawarma/",
+    "image": "images/shawarma-chicken.jpg",
+    "ingredients": [
+      "2 pounds boneless skinless chicken thighs (pounded to an even thickness)",
+      "1/4 cup extra virgin olive oil",
+      "2 tablespoons lemon juice",
+      "1 tablespoon balsamic vinegar",
+      "1 TBS EACH ground cumin, ground coriander",
+      "2 tsp EACH smoked paprika, ground cardamom, salt",
+      "1 tsp EACH garlic powder, onion powder, ground turmeric",
+      "1/2 tsp EACH cayenne pepper, allspice, pepper",
+      "1 cup Greek yogurt",
+      "1/3 cup packed cilantro",
+      "1/3 cup packed parsley",
+      "2 cloves garlic",
+      "2 tablespoons lemon juice",
+      "1/2 tsp EACH ground cumin, salt",
+      "1/4 teaspoon pepper",
+      "6-8 pitas",
+      "Romaine lettuce (chopped)",
+      "Roma tomatoes (sliced)",
+      "cucumbers (thinly sliced)",
+      "red onions (thinly sliced)",
+      "1 recipe hummus (or store-bought, optional)",
+      "amba (optitonal)",
+      "pickled turnipis (optitonal)"
+    ],
+    "instructions": [
+      {
+        "name": "MARINATE CHICKEN",
+        "steps": [
+          "Whisk all of the Marinade ingredients together in a large bowl or freezer size plastic bag. Add chicken and turn to coat. Marinate in the refrigerator 8 to 24 hours. Let chicken sit at room temperature for 20-30 minutes before cooking."
+        ]
+      },
+      {
+        "name": "YOGURT SAUCE",
+        "steps": [
+          "Make the yogurt sauce and prep your toppings while the chicken is marinating. Add all of the Sauce Ingredients to a blender and blend until the herbs are chopped, scraping down the sides of the blender as needed. If you would like a thicker sauce stir (don’t blend) in additional yogurt. Cover and chill in the refrigerator until you’re ready to serve."
+        ]
+      },
+      {
+        "name": "HOW TO COOK CHICKEN ON THE STOVE",
+        "steps": [
+          "Heat one tablespoon vegetable oil a large cast iron skillet or grill pan over medium high heat. Working in batches, add chicken in a single layer and cook for 4-5 minutes. Turn chicken over, cover, and reduce heat to medium. Cook approximately 3-5 additional minutes (depending on thickness of chicken), or until chicken is cooked through. Transfer chicken to a cutting board and let rest 5 minutes before slicing."
+        ]
+      },
+      {
+        "name": "HOW TO COOK CHICKEN ON THE GRILL",
+        "steps": [
+          "Grease and preheat the grill to medium heat, 375-450°F. Grill chicken, covered for 5-7 minutes per side, or until chicken is cooked through and an internal temperature reaches 165 degrees F. Transfer chicken to a cutting board and let rest 5 minutes before slicing."
+        ]
+      },
+      {
+        "name": "HOW TO COOK CHICKEN IN THE OVEN",
+        "steps": [
+          "Line a baking sheet with foil and spray with cooking spray. Add chicken to baking sheet in a single layer so they aren’t touching. Bake at 425 degrees F for 20-25 minutes or until an internal temperature reaches 165 degrees F. Transfer chicken to a cutting board and let rest 5 minutes before slicing."
+        ]
+      },
+      {
+        "name": "ASSEMBLE WRAPS",
+        "steps": [
+          "Top warmed pitas with lettuce, tomatoes, cucumbers, red onions, chicken and Cilantro Yogurt Sauce."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "greek-meatballs-keftedes",
+    "name": "Greek Meatballs (Keftedes)",
+    "source": "https://carlsbadcravings.com/greek-meatballs-keftedes/",
+    "image": "images/greek-meatballs-keftedes.jpg",
+    "ingredients": [
+      "1/2 small red onion",
+      "2 eggs",
+      "1 cup panko breadcrumbs",
+      "2 tablespoons milk",
+      "1 tablespoon lemon juice",
+      "1 tablespoon balsamic vinegar",
+      "6 cloves garlic, minced",
+      "1 tablespoon minced fresh dill",
+      "1 tablespoon minced fresh mint",
+      "2 tablespoons minced fresh parsley (or 2 teaspoons dried)",
+      "1 tablespoon minced fresh oregano (OR 1 teaspoon dried)",
+      "1 ½ teaspoons salt",
+      "1 tsp EACH ground coriander, paprika, ground cumin",
+      "1/2 tsp EACH pepper, red pepper flakes",
+      "1 pound ground lamb or pork (may sub beef)",
+      "1 pound lean ground beef",
+      "tzatziki",
+      "hummus",
+      "Greek lemon rice",
+      "Greek orzo pasta salad",
+      "Watermelon feta salad"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "If making tzatziki, make it first so it has time to chill. If baking, preheat oven to 400 degrees F.",
+          "Grate the onion on the largest holes of the grater straight into a large bowl (we want all the juices!), then whisk in the eggs. Add the remaining Meatball ingredients up to the beef/lamb and mix well. Add the beef and lamb and mix with your hands just to combine (don’t over-mix or your meatballs will be tough).",
+          "Line a baking sheet with foil (even if cooking the meatballs on the stove for easy cleanup) and lightly spray with cooking spray. Scoop the meat mixture using a 1 ½ tablespoon cookie dough scoop (or a heaping 1 tablespoon), then gently roll them a couple times in between the palms of your hands, but don't compact too much or the meatballs will be dense. Place the meatballs onto the prepared baking sheet without touching."
+        ]
+      },
+      {
+        "name": "TO BAKE",
+        "steps": [
+          "Generously spray the meatballs on the baking sheet with cooking spray OR for the ultimate crazy tender meatballs, drizzle them with 3-4 tablespoons melted butter mixed with 1 tablespoon lemon juice (AMAZING!).",
+          "Transfer the baking sheet to the oven and bake at 400 degrees F for 20-25 minutes, or until the meatballs are cooked through (reach 160 degrees F)."
+        ]
+      },
+      {
+        "name": "TO COOK IN A SKILLET",
+        "steps": [
+          "Add enough olive oil to a large nonstick skillet (my favorite pan!) to lightly cover the surface of the skillet. Heat over medium heat (medium-low if your skillet runs hot).",
+          "Working in batches, add the meatballs to the skillet in a single layer without touching and cook until nicely browned all over and cooked through (160 degrees F), about 5 - 6 minutes. Remove to a paper towel lined plate and tent with foil to keep warm. Repeat with remaining meatballs."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kale-caesar-salad",
+    "name": "Kale Caesar Salad",
+    "source": "https://www.loveandlemons.com/kale-caesar-salad/",
+    "image": "images/kale-caesar-salad.jpg",
+    "ingredients": [
+      "1 bunch curly kale (stemmed)",
+      "1 teaspoon extra-virgin olive oil",
+      "Sea salt",
+      "5 cups chopped romaine lettuce",
+      "Healthy Caesar Dressing or Vegan Caesar Dressing",
+      "1 cup Homemade Croutons",
+      "Shaved Parmesan cheese or vegan Parmesan",
+      "Roasted chickpeas (optional )",
+      "1 avocado (diced, optional)"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Tear the kale into bite-size pieces and place in a large bowl. Drizzle with the olive oil and sprinkle with a pinch of salt. Use your hands to massage the leaves until they wilt.",
+          "Add the romaine and toss. Drizzle with half the dressing and toss again.",
+          "Transfer to a serving bowl and top with the croutons and Parmesan. Add more dressing, roasted chickpeas, and avocado, if desired, and serve."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "classic-shrimp-scampi",
+    "name": "Classic Shrimp Scampi",
+    "source": "https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi",
+    "image": "images/classic-shrimp-scampi.webp",
+    "ingredients": [
+      "2 tablespoons butter",
+      "2 tablespoons extra-virgin olive oil",
+      "4 garlic cloves, minced",
+      "½ cup dry white wine or broth",
+      "¾ teaspoon kosher salt, or to taste",
+      "⅛ teaspoon crushed red pepper flakes, or to taste",
+      "Freshly ground black pepper",
+      "1 ¾ pounds large or extra-large shrimp, shelled",
+      "⅓ cup chopped parsley",
+      "Freshly squeezed juice of half a lemon",
+      "Cooked pasta or crusty bread"
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "In a large skillet, melt butter with olive oil. Add garlic and sauté until fragrant, about 1 minute. Add wine or broth, salt, red pepper flakes and plenty of black pepper and bring to a simmer. Let wine reduce by half, about 2 minutes.",
+          "Add shrimp and sauté until they just turn pink, 2 to 4 minutes depending upon their size. Stir in the parsley and lemon juice and serve over pasta or accompanied by crusty bread."
+        ]
+      }
+    ]
   }
 ]

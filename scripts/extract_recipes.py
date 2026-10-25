@@ -11,6 +11,7 @@ images/, and writes everything to data/recipes.json for the website.
 """
 
 import argparse
+import gzip
 import html
 import json
 import os
@@ -47,7 +48,10 @@ NUMBERED = re.compile(r"(?:^|(?<=[.!?)]))\s*\d{1,2}\.\s*(?=[A-Z])")
 def fetch(url):
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read(), resp.headers.get_content_type()
+        body = resp.read()
+        if resp.headers.get("Content-Encoding") == "gzip":  # some sites send it unasked
+            body = gzip.decompress(body)
+        return body, resp.headers.get_content_type()
 
 
 def fetch_page(url):
