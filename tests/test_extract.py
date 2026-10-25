@@ -29,7 +29,7 @@ class ExtractTest(unittest.TestCase):
         self.assertEqual(r["name"], "Tomato & Basil Soup")
         self.assertEqual(r["id"], "tomato-basil-soup")
         self.assertEqual(r["image"], "https://example.com/soup-1200.jpg")
-        self.assertEqual(r["ingredients"], ["2 tomatoes", "1 cup basil"])
+        self.assertEqual(r["ingredients"], [{"name": "", "items": ["2 tomatoes", "1 cup basil"]}])
         self.assertEqual(r["instructions"], [
             {"name": "", "steps": ["Chop the tomatoes."]},
             {"name": "To serve", "steps": ["Ladle into bowls."]},
@@ -76,7 +76,8 @@ class ExtractTest(unittest.TestCase):
         )
         r = ex.recipe_from_caption("https://www.instagram.com/p/X/", caption, "https://cdn/x.jpg")
         self.assertEqual(r["name"], "Pad Kra Pao")
-        self.assertEqual(r["ingredients"], ["1 tbsp fish sauce", "1.5 tbsp palm sugar"])
+        self.assertEqual(r["ingredients"], [
+            {"name": "For the sauce", "items": ["1 tbsp fish sauce", "1.5 tbsp palm sugar"]}])
         self.assertEqual(r["instructions"], [{"name": "", "steps": ["Mix the sauce.", "Fry and serve."]}])
         self.assertEqual(r["image"], "https://cdn/x.jpg")
 
@@ -84,6 +85,29 @@ class ExtractTest(unittest.TestCase):
         for u in ("https://www.instagram.com/p/C4dooVKp-Ax/", "https://www.instagram.com/reels/DLQKCZ1Pdmc/",
                   "https://www.instagram.com/reel/DT3iH2Ck7jQ/?igsh=x"):
             self.assertTrue(ex.INSTAGRAM.search(u))
+
+
+    def test_wprm_ingredient_groups(self):
+        page = (
+            '<div class="wprm-recipe-ingredient-group"><ul><li class="wprm-recipe-ingredient">a</li>'
+            '<li class="wprm-recipe-ingredient">b</li></ul></div>'
+            '<div class="wprm-recipe-ingredient-group"><h4 class="wprm-recipe-group-name">Dressing:</h4>'
+            '<ul><li class="wprm-recipe-ingredient">c</li></ul></div>'
+            '<div class="wprm-recipe-instructions-container">'
+        )
+        self.assertEqual(ex.ingredient_groups(page, ["a", "b", "c"]), [
+            {"name": "", "items": ["a", "b"]}, {"name": "Dressing", "items": ["c"]}])
+        # Counts that don't line up fall back to one list.
+        self.assertEqual(ex.ingredient_groups(page, ["a", "b"]), [{"name": "", "items": ["a", "b"]}])
+
+    def test_guess_category(self):
+        g = ex.guess_category
+        self.assertEqual(g("Chicken Pot Pie", []), "Chicken")
+        self.assertEqual(g("Best Chocolate Chip Cookies", ["2 eggs"]), "Dessert")
+        self.assertEqual(g("Buttermilk Pancakes", []), "Breakfast")
+        self.assertEqual(g("Pad Thai", ["1 lb shrimp", "2 tbsp fish sauce"]), "Seafood")
+        self.assertEqual(g("Summer Pasta", ["1 cup chicken broth", "zucchini"]), "Vegetarian")
+        self.assertEqual(g("Skillet Dinner", ["1 lb ground beef"]), "Beef")
 
 
 if __name__ == "__main__":

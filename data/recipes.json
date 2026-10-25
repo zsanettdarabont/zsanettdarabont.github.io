@@ -5,29 +5,39 @@
     "source": "https://moribyan.com/chicken-pot-pie-for-two/",
     "image": "images/chicken-pot-pie-for-two.webp",
     "ingredients": [
-      "2 tablespoons unsalted butter",
-      "1 to 2 carrots (diced (1 large or 2 small))",
-      "1/4 large yellow onion (diced)",
-      "1 to 2 celery ribs (diced small)",
-      "2 teaspoons minced garlic",
-      "3 sage leaves (chopped)",
-      "2 sprigs thyme",
-      "pinch of rosemary leaves (chopped small)",
-      "2 tablespoons all-purpose flour",
-      "1 1/3 to 1 1/2 cups chicken broth",
-      "1/3 cup half and half (or whole milk/heavy cream)",
-      "1/2 teaspoon salt (adjust to taste)",
-      "1/2 teaspoon black pepper",
-      "1/2 teaspoon smoked paprika",
-      "1/2 teaspoon red pepper flakes",
-      "1/2 teaspoon yellow mustard",
-      "dash of turmeric",
-      "dash of nutmeg",
-      "8 ounces rotisserie chicken (shredded (about 1 1/2 cups))",
-      "1/3 cup frozen baby peas",
-      "1 sheet puff pastry (8 ounces, thawed)",
-      "1 large egg",
-      "1 tablespoon heavy cream"
+      {
+        "name": "CHICKEN FILLING",
+        "items": [
+          "2 tablespoons unsalted butter",
+          "1 to 2 carrots (diced (1 large or 2 small))",
+          "1/4 large yellow onion (diced)",
+          "1 to 2 celery ribs (diced small)",
+          "2 teaspoons minced garlic",
+          "3 sage leaves (chopped)",
+          "2 sprigs thyme",
+          "pinch of rosemary leaves (chopped small)",
+          "2 tablespoons all-purpose flour",
+          "1 1/3 to 1 1/2 cups chicken broth",
+          "1/3 cup half and half (or whole milk/heavy cream)",
+          "1/2 teaspoon salt (adjust to taste)",
+          "1/2 teaspoon black pepper",
+          "1/2 teaspoon smoked paprika",
+          "1/2 teaspoon red pepper flakes",
+          "1/2 teaspoon yellow mustard",
+          "dash of turmeric",
+          "dash of nutmeg",
+          "8 ounces rotisserie chicken (shredded (about 1 1/2 cups))",
+          "1/3 cup frozen baby peas"
+        ]
+      },
+      {
+        "name": "TOPPING",
+        "items": [
+          "1 sheet puff pastry (8 ounces, thawed)",
+          "1 large egg",
+          "1 tablespoon heavy cream"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -46,7 +56,8 @@
           "Let cool for 5 minutes before serving."
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "lime-chicken-cilantro-recipe",
@@ -54,14 +65,24 @@
     "source": "https://carlsbadcravings.com/cilantro-lime-chicken/",
     "image": "images/lime-chicken-cilantro-recipe.jpg",
     "ingredients": [
-      "1 pound boneless chicken breasts (pounded to an even thickness)",
-      "1 cup loosely packed cilantro (leaves and stems)",
-      "4 garlic cloves, peeled",
-      "3 tablespoons lime juice",
-      "2 tablespoons olive oil",
-      "1 tsp EACH chili powder, ground cumin, onion powder",
-      "1/2 tsp EACH smoked paprika, salt, pepper, sugar, coriander",
-      "1/4 teaspoon cayenne pepper (optional)"
+      {
+        "name": "",
+        "items": [
+          "1 pound boneless chicken breasts (pounded to an even thickness)"
+        ]
+      },
+      {
+        "name": "Cilantro Lime Marinade",
+        "items": [
+          "1 cup loosely packed cilantro (leaves and stems)",
+          "4 garlic cloves, peeled",
+          "3 tablespoons lime juice",
+          "2 tablespoons olive oil",
+          "1 tsp EACH chili powder, ground cumin, onion powder",
+          "1/2 tsp EACH smoked paprika, salt, pepper, sugar, coriander",
+          "1/4 teaspoon cayenne pepper (optional)"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -88,7 +109,8 @@
           "Remove chicken to cutting board and baste with reserved 2 tablespoons marinade. Garnish with additional lime juice to taste if desired. Let rest 5 minutes before slicing."
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "roasted-butternut-squash-and-sun-dried-tomato-chicken-pasta",
@@ -96,21 +118,26 @@
     "source": "https://www.halfbakedharvest.com/butternut-squash-sun-dried-tomato-chicken-pasta/",
     "image": "images/roasted-butternut-squash-and-sun-dried-tomato-chicken-pasta.jpg",
     "ingredients": [
-      "1 tablespoon extra virgin olive oil",
-      "2 cups cubed butternut squash",
-      "6-10 cloves garlic",
-      "1 shallot, quartered",
-      "2 tablespoons chopped fresh sage",
-      "1 tablespoon chopped fresh rosemary",
-      "kosher salt and black pepper",
-      "1 cup heavy cream",
-      "1 cup grated parmesan cheese",
-      "1 jar (8 ounce) oil-packed sun-dried tomatoes",
-      "1 pound boneless skinless chicken breasts, cubed",
-      "4 tablespoons Italian seasoning (see note)",
-      "chili flakes",
-      "2 tablespoons salted butter",
-      "1 pound short cut pasta"
+      {
+        "name": "",
+        "items": [
+          "1 tablespoon extra virgin olive oil",
+          "2 cups cubed butternut squash",
+          "6-10 cloves garlic",
+          "1 shallot, quartered",
+          "2 tablespoons chopped fresh sage",
+          "1 tablespoon chopped fresh rosemary",
+          "kosher salt and black pepper",
+          "1 cup heavy cream",
+          "1 cup grated parmesan cheese",
+          "1 jar (8 ounce) oil-packed sun-dried tomatoes",
+          "1 pound boneless skinless chicken breasts, cubed",
+          "4 tablespoons Italian seasoning (see note)",
+          "chili flakes",
+          "2 tablespoons salted butter",
+          "1 pound short cut pasta"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -125,7 +152,8 @@
           "Serve topped with parmesan and basil. EAT and ENJOY."
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "creamy-tuscan-salmon-recipe",
@@ -133,26 +161,36 @@
     "source": "https://carlsbadcravings.com/tuscan-salmon/",
     "image": "images/creamy-tuscan-salmon-recipe.jpg",
     "ingredients": [
-      "4 6-8 oz. skinless salmon fillets",
-      "2 1/2 tablespoons flour",
-      "1 tsp EACH salt, garlic powder, onion powder",
-      "1/2 tsp EACH pepper, paprika",
-      "2-3 tablespoons olive oil",
-      "1 tablespoon unsalted butter",
-      "1 tablespoon oil from sun-dried tomatoes",
-      "1 pint cherry tomatoes ( halved)",
-      "1/2 cup sun-dried tomatoes (rinsed, drained, roughly chopped)",
-      "1 shallot (minced)",
-      "4 cloves garlic (minced)",
-      "pinch-1/4 teaspoon red pepper flakes",
-      "1 1/2 cups low sodium chicken broth",
-      "1 tablespoon cornstarch",
-      "1 cup heavy cream (or evaporated milk + 1 tsp cornstarch)",
-      "1 tsp EACH dried parsley, dried basil (or 1 TBS EACH FRESH)",
-      "1/2 teaspoon dried oregano",
-      "1/4 cup finely grated fresh Parmesan cheese",
-      "Salt and pepper to taste",
-      "2 cups baby spinach (optional)"
+      {
+        "name": "Salmon",
+        "items": [
+          "4 6-8 oz. skinless salmon fillets",
+          "2 1/2 tablespoons flour",
+          "1 tsp EACH salt, garlic powder, onion powder",
+          "1/2 tsp EACH pepper, paprika",
+          "2-3 tablespoons olive oil"
+        ]
+      },
+      {
+        "name": "Creamy Tuscan Sauce",
+        "items": [
+          "1 tablespoon unsalted butter",
+          "1 tablespoon oil from sun-dried tomatoes",
+          "1 pint cherry tomatoes ( halved)",
+          "1/2 cup sun-dried tomatoes (rinsed, drained, roughly chopped)",
+          "1 shallot (minced)",
+          "4 cloves garlic (minced)",
+          "pinch-1/4 teaspoon red pepper flakes",
+          "1 1/2 cups low sodium chicken broth",
+          "1 tablespoon cornstarch",
+          "1 cup heavy cream (or evaporated milk + 1 tsp cornstarch)",
+          "1 tsp EACH dried parsley, dried basil (or 1 TBS EACH FRESH)",
+          "1/2 teaspoon dried oregano",
+          "1/4 cup finely grated fresh Parmesan cheese",
+          "Salt and pepper to taste",
+          "2 cups baby spinach (optional)"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -166,7 +204,8 @@
           "Add salmon to the skillet and warm through to soak up the sauce. Garnish with fresh parsley if desired"
         ]
       }
-    ]
+    ],
+    "category": "Seafood"
   },
   {
     "id": "orzo-pasta-salad-recipe-with-feta",
@@ -174,30 +213,45 @@
     "source": "https://carlsbadcravings.com/orzo-pasta-salad/",
     "image": "images/orzo-pasta-salad-recipe-with-feta.jpg",
     "ingredients": [
-      "16 oz. uncooked orzo pasta",
-      "2 tablespoon olive oil",
-      "1 tablespoon unsalted butter",
-      "4 1/4 cups low sodium chicken broth",
-      "1/4 cup lemon juice",
-      "1/4 tsp EACH salt, pepper",
-      "1/2 red onion (chopped)",
-      "2 ears grilled corn, cut off the cob (grilling optional but recommended – see notes)",
-      "1 English cucumber (sliced and quartered)",
-      "1 red bell pepper, chopped",
-      "1 pint cherry tomatoes ( halved)",
-      "1 15 oz. can garbanzo beans {chickpeas} (drained and rinsed)",
-      "1/2 cup pitted Kalamata olives (halved)",
-      "1/2 cup sliced almonds",
-      "1/2 cup fresh basil (chopped )",
-      "1/2 cup feta",
-      "1/3 cup extra virgin olive oil",
-      "2 tablespoons red wine vinegar",
-      "1 tablespoon lemon juice",
-      "1 TBS EACH fresh dill parsley, oregano ( OR 1 tsp EACH dried)",
-      "1 teaspoon sugar",
-      "1 teaspoon Dijon mustard",
-      "1/2 teaspoon garlic powder",
-      "1/4 tsp EACH pepper, salt"
+      {
+        "name": "ORZO",
+        "items": [
+          "16 oz. uncooked orzo pasta",
+          "2 tablespoon olive oil",
+          "1 tablespoon unsalted butter",
+          "4 1/4 cups low sodium chicken broth",
+          "1/4 cup lemon juice",
+          "1/4 tsp EACH salt, pepper",
+          "1/2 red onion (chopped)"
+        ]
+      },
+      {
+        "name": "SALAD",
+        "items": [
+          "2 ears grilled corn, cut off the cob (grilling optional but recommended – see notes)",
+          "1 English cucumber (sliced and quartered)",
+          "1 red bell pepper, chopped",
+          "1 pint cherry tomatoes ( halved)",
+          "1 15 oz. can garbanzo beans {chickpeas} (drained and rinsed)",
+          "1/2 cup pitted Kalamata olives (halved)",
+          "1/2 cup sliced almonds",
+          "1/2 cup fresh basil (chopped )",
+          "1/2 cup feta"
+        ]
+      },
+      {
+        "name": "DRESSING",
+        "items": [
+          "1/3 cup extra virgin olive oil",
+          "2 tablespoons red wine vinegar",
+          "1 tablespoon lemon juice",
+          "1 TBS EACH fresh dill parsley, oregano ( OR 1 tsp EACH dried)",
+          "1 teaspoon sugar",
+          "1 teaspoon Dijon mustard",
+          "1/2 teaspoon garlic powder",
+          "1/4 tsp EACH pepper, salt"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -210,7 +264,8 @@
           "Taste and season with additional lemon juice or salt and pepper to taste."
         ]
       }
-    ]
+    ],
+    "category": "Vegetarian"
   },
   {
     "id": "the-best-chicken-parmesan-parmigiana",
@@ -218,19 +273,34 @@
     "source": "https://asimplepalate.com/blog/chicken-parmigiana/",
     "image": "images/the-best-chicken-parmesan-parmigiana.jpg",
     "ingredients": [
-      "3 chicken breasts, (sliced in half length-wise to create 6 cutlets)",
-      "1/2 cup all-purpose flour (can also use gluten-free flour blend or white whole wheat)",
-      "3 eggs, whisked",
-      "1/3 cup olive oil",
-      "1 1/2 cups breadcrumbs",
-      "1/2 cup freshly grated & finely grated Parmigiano Reggiano, shredded",
-      "1/2 tsp (each) salt & pepper",
-      "2 tsp Italian herb blend (thyme, oregano, basil, rosemary)",
-      "1 tsp garlic powder",
-      "6 slices Mozzarella",
-      "1 1/2 cups marinara sauce",
-      "1/3 cup Freshly grated Parmigiano Reggiano",
-      "2 tbsp fresh basil, chopped"
+      {
+        "name": "For the Chicken",
+        "items": [
+          "3 chicken breasts, (sliced in half length-wise to create 6 cutlets)",
+          "1/2 cup all-purpose flour (can also use gluten-free flour blend or white whole wheat)",
+          "3 eggs, whisked",
+          "1/3 cup olive oil"
+        ]
+      },
+      {
+        "name": "Breadcrumbs",
+        "items": [
+          "1 1/2 cups breadcrumbs",
+          "1/2 cup freshly grated & finely grated Parmigiano Reggiano, shredded",
+          "1/2 tsp (each) salt & pepper",
+          "2 tsp Italian herb blend (thyme, oregano, basil, rosemary)",
+          "1 tsp garlic powder"
+        ]
+      },
+      {
+        "name": "For the Topping",
+        "items": [
+          "6 slices Mozzarella",
+          "1 1/2 cups marinara sauce",
+          "1/3 cup Freshly grated Parmigiano Reggiano",
+          "2 tbsp fresh basil, chopped"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -251,7 +321,8 @@
           "If you would like to use less oil, use this baking method instead! I love making chicken parmesan this way and the results are almost identical to pan-frying. Baked method: preheat oven to 450F. Follow steps 2-5 above, then after breading the chicken, lay the cutlets on a pan lined with parchment paper. Spray the chicken with olive oil, or brush with 2 Tablespoons of olive oil. Bake for 20-25 minutes, if you feel the bottom is cooking too fast you can flip the chicken halfway through the bake time. Then remove from oven and layer each cutlet with mozzarella, sauce, and Parmigiano and bake for 5 additional minutes. Broil on HIGH for the last minute for the cheese to brown. Serve with fresh basil!"
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "skillet-chicken-fajitas",
@@ -259,36 +330,56 @@
     "source": "https://carlsbadcravings.com/chicken-fajitas-recipe/",
     "image": "images/skillet-chicken-fajitas.jpg",
     "ingredients": [
-      "2 large chicken breasts (sliced horizontally to create 4 fillets (1 1/2 pounds))",
-      "1/2 red onion, thinly sliced",
-      "3 bell peppers, thinly sliced (any mix of colors)",
-      "8-12 flour tortillas",
-      "2 tablespoons olive oil",
-      "3 tablespoons brown sugar",
-      "2 tablespoons orange juice",
-      "2 tablespoons lime juice",
-      "2 tablespoons reduced sodium soy sauce",
-      "1 tablespoon Dijon mustard",
-      "1 tablespoon chili powder",
-      "1 1/2 teaspoons ground cumin",
-      "1 tsp EACH garlic pwdr, onion pwdr, salt",
-      "1/2 tsp EACH smoked paprika, chipotle chili pwdr, dried oregano",
-      "1/4 teaspoon pepper",
-      "2 teaspoons liquid smoke",
-      "1 cup sour cream",
-      "2 tablespoons mayonnaise",
-      "1-2 tablespoons lime juice, to taste",
-      "1/2 teaspoon salt",
-      "1/4 - 1/2 teaspoon chipotle chili powder",
-      "1/4 cup packed cilantro, finely chopped",
-      "cheese",
-      "Guacamole/chopped avocados",
-      "Recipe Avocado Crema (my FAV!)",
-      "salsa",
-      "Chopped tomatoes",
-      "black beans",
-      "cilantro",
-      "Freshly squeezed lime juice"
+      {
+        "name": "",
+        "items": [
+          "2 large chicken breasts (sliced horizontally to create 4 fillets (1 1/2 pounds))",
+          "1/2 red onion, thinly sliced",
+          "3 bell peppers, thinly sliced (any mix of colors)",
+          "8-12 flour tortillas"
+        ]
+      },
+      {
+        "name": "Chicken Fajita Marinade",
+        "items": [
+          "2 tablespoons olive oil",
+          "3 tablespoons brown sugar",
+          "2 tablespoons orange juice",
+          "2 tablespoons lime juice",
+          "2 tablespoons reduced sodium soy sauce",
+          "1 tablespoon Dijon mustard",
+          "1 tablespoon chili powder",
+          "1 1/2 teaspoons ground cumin",
+          "1 tsp EACH garlic pwdr, onion pwdr, salt",
+          "1/2 tsp EACH smoked paprika, chipotle chili pwdr, dried oregano",
+          "1/4 teaspoon pepper",
+          "2 teaspoons liquid smoke"
+        ]
+      },
+      {
+        "name": "Chipotle Lime Crema (optional)",
+        "items": [
+          "1 cup sour cream",
+          "2 tablespoons mayonnaise",
+          "1-2 tablespoons lime juice, to taste",
+          "1/2 teaspoon salt",
+          "1/4 - 1/2 teaspoon chipotle chili powder",
+          "1/4 cup packed cilantro, finely chopped"
+        ]
+      },
+      {
+        "name": "Filling/Topping Ideas",
+        "items": [
+          "cheese",
+          "Guacamole/chopped avocados",
+          "Recipe Avocado Crema (my FAV!)",
+          "salsa",
+          "Chopped tomatoes",
+          "black beans",
+          "cilantro",
+          "Freshly squeezed lime juice"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -301,7 +392,8 @@
           "ASSEMBLE: Layer tortillas with Chicken Fajita mixture and desired toppings. Top with Chipotle Lime Crema."
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "authentic-birria",
@@ -309,25 +401,30 @@
     "source": "https://www.isabeleats.com/authentic-birria/",
     "image": "images/authentic-birria.jpg",
     "ingredients": [
-      "4 to 5 pounds chuck roast, (cut into large 4-inch chunks)",
-      "½ tablespoon kosher salt, (plus more to taste )",
-      "½ tablespoon black pepper",
-      "1 ½ tablespoon olive oil",
-      "12 guajillo chiles, (rinsed, stemmed, and seeded (about 2.5 oz))",
-      "5 ancho chiles, (rinsed, stemmed, and seeded (about 2 oz))",
-      "5 árbol chiles, (rinsed and stemmed (about 0.1 oz))",
-      "2 large Roma tomatoes",
-      "½ medium yellow onion",
-      "1 4-inch Mexican cinnamon stick*",
-      "3 bay leaves",
-      "½ teaspoon whole black peppercorns",
-      "water, (as needed)",
-      "2 cups beef broth",
-      "¼ cup distilled white vinegar",
-      "5 cloves garlic",
-      "1 teaspoon ground cumin",
-      "1 teaspoon dried Mexican oregano*",
-      "½ teaspoon ground cloves"
+      {
+        "name": "",
+        "items": [
+          "4 to 5 pounds chuck roast, (cut into large 4-inch chunks)",
+          "½ tablespoon kosher salt, (plus more to taste )",
+          "½ tablespoon black pepper",
+          "1 ½ tablespoon olive oil",
+          "12 guajillo chiles, (rinsed, stemmed, and seeded (about 2.5 oz))",
+          "5 ancho chiles, (rinsed, stemmed, and seeded (about 2 oz))",
+          "5 árbol chiles, (rinsed and stemmed (about 0.1 oz))",
+          "2 large Roma tomatoes",
+          "½ medium yellow onion",
+          "1 4-inch Mexican cinnamon stick*",
+          "3 bay leaves",
+          "½ teaspoon whole black peppercorns",
+          "water, (as needed)",
+          "2 cups beef broth",
+          "¼ cup distilled white vinegar",
+          "5 cloves garlic",
+          "1 teaspoon ground cumin",
+          "1 teaspoon dried Mexican oregano*",
+          "½ teaspoon ground cloves"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -343,7 +440,8 @@
           "Transfer the meat to a large bowl and shred it with 2 forks. Add the meat back into the consomé and serve as a stew in bowls with diced onion and chopped cilantro or as tacos in corn tortillas with shredded Oaxaca cheese, cilantro, and diced onions."
         ]
       }
-    ]
+    ],
+    "category": "Beef"
   },
   {
     "id": "seriously-the-best-healthy-turkey-chili",
@@ -351,21 +449,26 @@
     "source": "https://www.ambitiouskitchen.com/seriously-the-best-healthy-turkey-chili/",
     "image": "images/seriously-the-best-healthy-turkey-chili.webp",
     "ingredients": [
-      "2 teaspoons olive oil",
-      "1 yellow onion, chopped",
-      "3 garlic cloves, minced",
-      "1 medium red bell pepper, chopped",
-      "1 pound extra lean ground turkey or chicken (99%)",
-      "4 tablespoons chili powder* (I used McCormick chili powder, which is very mild. Do not use spicy chili powder, and if using a different brand, start with 2 tablespoons)",
-      "2 teaspoons ground cumin",
-      "1 teaspoon dried oregano",
-      "1/4 teaspoon cayenne pepper",
-      "1/2 teaspoon salt, plus more to taste",
-      "1 (28-ounce) can diced tomatoes or crushed tomatoes",
-      "1 1/4 cups chicken broth",
-      "2 (15 oz) cans dark red kidney beans, rinsed and drained",
-      "1 (15 oz) can sweet corn, rinsed and drained",
-      "For topping: cheese, avocado, tortilla chips, cilantro, sour cream"
+      {
+        "name": "",
+        "items": [
+          "2 teaspoons olive oil",
+          "1 yellow onion, chopped",
+          "3 garlic cloves, minced",
+          "1 medium red bell pepper, chopped",
+          "1 pound extra lean ground turkey or chicken (99%)",
+          "4 tablespoons chili powder* (I used McCormick chili powder, which is very mild. Do not use spicy chili powder, and if using a different brand, start with 2 tablespoons)",
+          "2 teaspoons ground cumin",
+          "1 teaspoon dried oregano",
+          "1/4 teaspoon cayenne pepper",
+          "1/2 teaspoon salt, plus more to taste",
+          "1 (28-ounce) can diced tomatoes or crushed tomatoes",
+          "1 1/4 cups chicken broth",
+          "2 (15 oz) cans dark red kidney beans, rinsed and drained",
+          "1 (15 oz) can sweet corn, rinsed and drained",
+          "For topping: cheese, avocado, tortilla chips, cilantro, sour cream"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -377,7 +480,8 @@
           "Garnish with anything you'd like. Makes 6 servings, about 1 1/2 cups each."
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "thai-green-curry",
@@ -385,22 +489,27 @@
     "source": "https://www.loveandlemons.com/thai-green-curry/",
     "image": "images/thai-green-curry.jpg",
     "ingredients": [
-      "2 tablespoons coconut oil",
-      "2 medium Chinese or Japanese eggplants (cut into ½-inch-thick half-moons)",
-      "Sea salt",
-      "1 (13.5-ounce) can full-fat coconut milk",
-      "¼ cup Thai green curry paste",
-      "1 tablespoon fresh ginger matchsticks",
-      "1 cup water",
-      "7 ounces extra-firm tofu (cubed (raw, baked, or fried—I like to use store-bought fried tofu))",
-      "1 red bell pepper (stemmed, seeded, and sliced)",
-      "4 ounces snow peas",
-      "2 Fresno chiles or 4 Thai chiles (thinly sliced)",
-      "1 tablespoon fresh lime juice",
-      "1 teaspoon sugar (optional)",
-      "Tamari (to taste, optional)",
-      "Thai basil or fresh cilantro (for garnish)",
-      "Cooked rice (for serving)"
+      {
+        "name": "",
+        "items": [
+          "2 tablespoons coconut oil",
+          "2 medium Chinese or Japanese eggplants (cut into ½-inch-thick half-moons)",
+          "Sea salt",
+          "1 (13.5-ounce) can full-fat coconut milk",
+          "¼ cup Thai green curry paste",
+          "1 tablespoon fresh ginger matchsticks",
+          "1 cup water",
+          "7 ounces extra-firm tofu (cubed (raw, baked, or fried—I like to use store-bought fried tofu))",
+          "1 red bell pepper (stemmed, seeded, and sliced)",
+          "4 ounces snow peas",
+          "2 Fresno chiles or 4 Thai chiles (thinly sliced)",
+          "1 tablespoon fresh lime juice",
+          "1 teaspoon sugar (optional)",
+          "Tamari (to taste, optional)",
+          "Thai basil or fresh cilantro (for garnish)",
+          "Cooked rice (for serving)"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -413,7 +522,8 @@
           "Garnish with the remaining chiles and herbs and serve with rice."
         ]
       }
-    ]
+    ],
+    "category": "Vegetarian"
   },
   {
     "id": "shawarma-chicken",
@@ -421,29 +531,44 @@
     "source": "https://carlsbadcravings.com/chicken-shawarma/",
     "image": "images/shawarma-chicken.jpg",
     "ingredients": [
-      "2 pounds boneless skinless chicken thighs (pounded to an even thickness)",
-      "1/4 cup extra virgin olive oil",
-      "2 tablespoons lemon juice",
-      "1 tablespoon balsamic vinegar",
-      "1 TBS EACH ground cumin, ground coriander",
-      "2 tsp EACH smoked paprika, ground cardamom, salt",
-      "1 tsp EACH garlic powder, onion powder, ground turmeric",
-      "1/2 tsp EACH cayenne pepper, allspice, pepper",
-      "1 cup Greek yogurt",
-      "1/3 cup packed cilantro",
-      "1/3 cup packed parsley",
-      "2 cloves garlic",
-      "2 tablespoons lemon juice",
-      "1/2 tsp EACH ground cumin, salt",
-      "1/4 teaspoon pepper",
-      "6-8 pitas",
-      "Romaine lettuce (chopped)",
-      "Roma tomatoes (sliced)",
-      "cucumbers (thinly sliced)",
-      "red onions (thinly sliced)",
-      "1 recipe hummus (or store-bought, optional)",
-      "amba (optitonal)",
-      "pickled turnipis (optitonal)"
+      {
+        "name": "CHICKEN MARINADE",
+        "items": [
+          "2 pounds boneless skinless chicken thighs (pounded to an even thickness)",
+          "1/4 cup extra virgin olive oil",
+          "2 tablespoons lemon juice",
+          "1 tablespoon balsamic vinegar",
+          "1 TBS EACH ground cumin, ground coriander",
+          "2 tsp EACH smoked paprika, ground cardamom, salt",
+          "1 tsp EACH garlic powder, onion powder, ground turmeric",
+          "1/2 tsp EACH cayenne pepper, allspice, pepper"
+        ]
+      },
+      {
+        "name": "CILANTRO YOGURT SAUCE",
+        "items": [
+          "1 cup Greek yogurt",
+          "1/3 cup packed cilantro",
+          "1/3 cup packed parsley",
+          "2 cloves garlic",
+          "2 tablespoons lemon juice",
+          "1/2 tsp EACH ground cumin, salt",
+          "1/4 teaspoon pepper"
+        ]
+      },
+      {
+        "name": "FOR WRAPS",
+        "items": [
+          "6-8 pitas",
+          "Romaine lettuce (chopped)",
+          "Roma tomatoes (sliced)",
+          "cucumbers (thinly sliced)",
+          "red onions (thinly sliced)",
+          "1 recipe hummus (or store-bought, optional)",
+          "amba (optitonal)",
+          "pickled turnipis (optitonal)"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -482,7 +607,8 @@
           "Top warmed pitas with lettuce, tomatoes, cucumbers, red onions, chicken and Cilantro Yogurt Sauce."
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "greek-meatballs-keftedes",
@@ -490,27 +616,42 @@
     "source": "https://carlsbadcravings.com/greek-meatballs-keftedes/",
     "image": "images/greek-meatballs-keftedes.jpg",
     "ingredients": [
-      "1/2 small red onion",
-      "2 eggs",
-      "1 cup panko breadcrumbs",
-      "2 tablespoons milk",
-      "1 tablespoon lemon juice",
-      "1 tablespoon balsamic vinegar",
-      "6 cloves garlic, minced",
-      "1 tablespoon minced fresh dill",
-      "1 tablespoon minced fresh mint",
-      "2 tablespoons minced fresh parsley (or 2 teaspoons dried)",
-      "1 tablespoon minced fresh oregano (OR 1 teaspoon dried)",
-      "1 ½ teaspoons salt",
-      "1 tsp EACH ground coriander, paprika, ground cumin",
-      "1/2 tsp EACH pepper, red pepper flakes",
-      "1 pound ground lamb or pork (may sub beef)",
-      "1 pound lean ground beef",
-      "tzatziki",
-      "hummus",
-      "Greek lemon rice",
-      "Greek orzo pasta salad",
-      "Watermelon feta salad"
+      {
+        "name": "",
+        "items": [
+          "1/2 small red onion",
+          "2 eggs",
+          "1 cup panko breadcrumbs",
+          "2 tablespoons milk",
+          "1 tablespoon lemon juice",
+          "1 tablespoon balsamic vinegar",
+          "6 cloves garlic, minced",
+          "1 tablespoon minced fresh dill",
+          "1 tablespoon minced fresh mint",
+          "2 tablespoons minced fresh parsley (or 2 teaspoons dried)",
+          "1 tablespoon minced fresh oregano (OR 1 teaspoon dried)",
+          "1 ½ teaspoons salt",
+          "1 tsp EACH ground coriander, paprika, ground cumin",
+          "1/2 tsp EACH pepper, red pepper flakes"
+        ]
+      },
+      {
+        "name": "Add last",
+        "items": [
+          "1 pound ground lamb or pork (may sub beef)",
+          "1 pound lean ground beef"
+        ]
+      },
+      {
+        "name": "Serving Suggestions",
+        "items": [
+          "tzatziki",
+          "hummus",
+          "Greek lemon rice",
+          "Greek orzo pasta salad",
+          "Watermelon feta salad"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -535,7 +676,8 @@
           "Working in batches, add the meatballs to the skillet in a single layer without touching and cook until nicely browned all over and cooked through (160 degrees F), about 5 - 6 minutes. Remove to a paper towel lined plate and tent with foil to keep warm. Repeat with remaining meatballs."
         ]
       }
-    ]
+    ],
+    "category": "Beef"
   },
   {
     "id": "kale-caesar-salad",
@@ -543,15 +685,20 @@
     "source": "https://www.loveandlemons.com/kale-caesar-salad/",
     "image": "images/kale-caesar-salad.jpg",
     "ingredients": [
-      "1 bunch curly kale (stemmed)",
-      "1 teaspoon extra-virgin olive oil",
-      "Sea salt",
-      "5 cups chopped romaine lettuce",
-      "Healthy Caesar Dressing or Vegan Caesar Dressing",
-      "1 cup Homemade Croutons",
-      "Shaved Parmesan cheese or vegan Parmesan",
-      "Roasted chickpeas (optional )",
-      "1 avocado (diced, optional)"
+      {
+        "name": "",
+        "items": [
+          "1 bunch curly kale (stemmed)",
+          "1 teaspoon extra-virgin olive oil",
+          "Sea salt",
+          "5 cups chopped romaine lettuce",
+          "Healthy Caesar Dressing or Vegan Caesar Dressing",
+          "1 cup Homemade Croutons",
+          "Shaved Parmesan cheese or vegan Parmesan",
+          "Roasted chickpeas (optional )",
+          "1 avocado (diced, optional)"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -562,7 +709,8 @@
           "Transfer to a serving bowl and top with the croutons and Parmesan. Add more dressing, roasted chickpeas, and avocado, if desired, and serve."
         ]
       }
-    ]
+    ],
+    "category": "Vegetarian"
   },
   {
     "id": "classic-shrimp-scampi",
@@ -570,17 +718,22 @@
     "source": "https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi",
     "image": "images/classic-shrimp-scampi.webp",
     "ingredients": [
-      "2 tablespoons butter",
-      "2 tablespoons extra-virgin olive oil",
-      "4 garlic cloves, minced",
-      "½ cup dry white wine or broth",
-      "¾ teaspoon kosher salt, or to taste",
-      "⅛ teaspoon crushed red pepper flakes, or to taste",
-      "Freshly ground black pepper",
-      "1 ¾ pounds large or extra-large shrimp, shelled",
-      "⅓ cup chopped parsley",
-      "Freshly squeezed juice of half a lemon",
-      "Cooked pasta or crusty bread"
+      {
+        "name": "",
+        "items": [
+          "2 tablespoons butter",
+          "2 tablespoons extra-virgin olive oil",
+          "4 garlic cloves, minced",
+          "½ cup dry white wine or broth",
+          "¾ teaspoon kosher salt, or to taste",
+          "⅛ teaspoon crushed red pepper flakes, or to taste",
+          "Freshly ground black pepper",
+          "1 ¾ pounds large or extra-large shrimp, shelled",
+          "⅓ cup chopped parsley",
+          "Freshly squeezed juice of half a lemon",
+          "Cooked pasta or crusty bread"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -590,7 +743,8 @@
           "Add shrimp and sauté until they just turn pink, 2 to 4 minutes depending upon their size. Stir in the parsley and lemon juice and serve over pasta or accompanied by crusty bread."
         ]
       }
-    ]
+    ],
+    "category": "Seafood"
   },
   {
     "id": "crispy-rice-steak-salad-with-thai-inspired-dressing",
@@ -598,29 +752,49 @@
     "source": "https://kalejunkie.com/crispy-rice-steak-salad-with-thai-inspired-dressing/",
     "image": "images/crispy-rice-steak-salad-with-thai-inspired-dressing.jpg",
     "ingredients": [
-      "2 Cups Cooked Rice (cooled - I use jasmine rice, but any rice should work well)",
-      "2 Teaspoons Soy Sauce",
-      "2 Tablespoons Chili Crisp",
-      "1 Tablespoon Sesame Oil",
-      "1 Pound Skirt Steak",
-      "1/2 Teaspoon Sea Salt",
-      "1/2 Teaspoon Ground Black Pepper",
-      "5 Persian Cucumbers (thinly sliced - you can also substitute one large English cucumber)",
-      "1 Bunch Fresh Mint (chopped - this is approximately 1/2 cup)",
-      "1 Bunch Green Onions (thinly sliced - this is approximately 3/4 cup)",
-      "1 Cup Baby Tomatoes (halved)",
-      "1/2 Bunch Cilantro (chopped - this is approximately 1/2 cup)",
-      "1 Small Red Onion (thinly sliced)",
-      "1 Cup Salted Peanuts (finely chopped)",
-      "1/4 Cup Olive Oil",
-      "1/4 Cup Toasted Sesame Oil",
-      "3 Tablespoons Fish Sauce (you can also substitute soy sauce or coconut aminos)",
-      "1-2 Tablespoons Maple Syrup",
-      "2 Teaspoons Sriracha",
-      "1/4 Cup Lime Juice (this is approximately 1-2 limes)",
-      "2 Tablespoons Rice Wine Vinegar",
-      "1 Teaspoon Ground Ginger",
-      "3 Cloves Garlic (mashed)"
+      {
+        "name": "For the Crispy Rice",
+        "items": [
+          "2 Cups Cooked Rice (cooled - I use jasmine rice, but any rice should work well)",
+          "2 Teaspoons Soy Sauce",
+          "2 Tablespoons Chili Crisp",
+          "1 Tablespoon Sesame Oil"
+        ]
+      },
+      {
+        "name": "For the Steak",
+        "items": [
+          "1 Pound Skirt Steak",
+          "1/2 Teaspoon Sea Salt",
+          "1/2 Teaspoon Ground Black Pepper"
+        ]
+      },
+      {
+        "name": "For the Salad",
+        "items": [
+          "5 Persian Cucumbers (thinly sliced - you can also substitute one large English cucumber)",
+          "1 Bunch Fresh Mint (chopped - this is approximately 1/2 cup)",
+          "1 Bunch Green Onions (thinly sliced - this is approximately 3/4 cup)",
+          "1 Cup Baby Tomatoes (halved)",
+          "1/2 Bunch Cilantro (chopped - this is approximately 1/2 cup)",
+          "1 Small Red Onion (thinly sliced)",
+          "1 Cup Salted Peanuts (finely chopped)"
+        ]
+      },
+      {
+        "name": "For the Creamy Soy Dressing",
+        "items": [
+          "1/4 Cup Olive Oil",
+          "1/4 Cup Toasted Sesame Oil",
+          "3 Tablespoons Fish Sauce (you can also substitute soy sauce or coconut aminos)",
+          "1-2 Tablespoons Maple Syrup",
+          "2 Teaspoons Sriracha",
+          "1/4 Cup Lime Juice (this is approximately 1-2 limes)",
+          "2 Tablespoons Rice Wine Vinegar",
+          "1 Teaspoon Ground Ginger",
+          "3 Cloves Garlic (mashed)"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -645,7 +819,8 @@
           "Serve and enjoy! Store any leftovers in an airtight container, in the fridge, for up to three days."
         ]
       }
-    ]
+    ],
+    "category": "Beef"
   },
   {
     "id": "chicken-katsu-curry-rice",
@@ -653,26 +828,41 @@
     "source": "https://thewoksoflife.com/chicken-katsu-curry-rice/",
     "image": "images/chicken-katsu-curry-rice.webp",
     "ingredients": [
-      "1 tablespoon vegetable oil",
-      "10-12 ounces white or yellow onion (about 2 small to medium onions, halved and cut into 1-inch/2.5cm pieces)",
-      "1 clove garlic (minced)",
-      "1 tablespoon tomato paste",
-      "1 teaspoon Worcestershire sauce (optional)",
-      "2 tablespoons curry powder (such as madras curry powder)",
-      "1 teaspoon salt",
-      "1 teaspoon sugar",
-      "8 ounces russet or yukon gold potato (cut into 3/4 inch or 2 cm cubes; about 1 medium or 2 small potatoes)",
-      "8 ounces carrots (cut into 3/4 inch or 2 cm triangular pieces; about 3 medium carrots)",
-      "2 cups chicken stock",
-      "1 tablespoon cornstarch (mixed onto a slurry with 1 tablespoon water)",
-      "1 tablespoon salted butter",
-      "2 pounds boneless skinless chicken breast",
-      "salt and pepper",
-      "2 tablespoons all purpose flour",
-      "1 egg",
-      "1 1/3 cups panko breadcrumbs",
-      "vegetable oil (for frying)",
-      "6 cups steamed short grain Japanese rice"
+      {
+        "name": "For the curry sauce",
+        "items": [
+          "1 tablespoon vegetable oil",
+          "10-12 ounces white or yellow onion (about 2 small to medium onions, halved and cut into 1-inch/2.5cm pieces)",
+          "1 clove garlic (minced)",
+          "1 tablespoon tomato paste",
+          "1 teaspoon Worcestershire sauce (optional)",
+          "2 tablespoons curry powder (such as madras curry powder)",
+          "1 teaspoon salt",
+          "1 teaspoon sugar",
+          "8 ounces russet or yukon gold potato (cut into 3/4 inch or 2 cm cubes; about 1 medium or 2 small potatoes)",
+          "8 ounces carrots (cut into 3/4 inch or 2 cm triangular pieces; about 3 medium carrots)",
+          "2 cups chicken stock",
+          "1 tablespoon cornstarch (mixed onto a slurry with 1 tablespoon water)",
+          "1 tablespoon salted butter"
+        ]
+      },
+      {
+        "name": "For the chicken katsu",
+        "items": [
+          "2 pounds boneless skinless chicken breast",
+          "salt and pepper",
+          "2 tablespoons all purpose flour",
+          "1 egg",
+          "1 1/3 cups panko breadcrumbs",
+          "vegetable oil (for frying)"
+        ]
+      },
+      {
+        "name": "For serving",
+        "items": [
+          "6 cups steamed short grain Japanese rice"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -688,7 +878,8 @@
           "Slice the chicken, and place over the steamed rice. Ladle the curry sauce on the side. Enjoy!"
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "creamy-cajun-chicken-pasta",
@@ -696,17 +887,27 @@
     "source": "https://www.instagram.com/p/DcjjeMYurWd/",
     "image": "images/creamy-cajun-chicken-pasta.jpg",
     "ingredients": [
-      "2 large chicken breasts, flattened",
-      "Seasoning: 1 tbsp paprika, 2 tsp garlic powder, 2 tsp onion powder, 2 tsp Italian seasoning, 2 tsp salt, 2 tsp black pepper, 1–2 tsp cayenne pepper (optional)",
-      "1 tbsp olive oil",
-      "8 oz (225 g) rigatoni",
-      "3 tbsp butter",
-      "1 large shallot, finely diced",
-      "6–8 garlic cloves, minced",
-      "1 cup heavy cream, room temperature",
-      "Seasoning: 1 tsp chicken bouillon powder, 1 tsp paprika, 1 tsp garlic powder, 1 tsp Italian seasoning, 1 tsp black pepper",
-      "3/4 cup freshly grated Parmesan (please use fresh!)",
-      "1/2 cup pasta water, as needed (aka liquid gold)"
+      {
+        "name": "For the Chicken",
+        "items": [
+          "2 large chicken breasts, flattened",
+          "Seasoning: 1 tbsp paprika, 2 tsp garlic powder, 2 tsp onion powder, 2 tsp Italian seasoning, 2 tsp salt, 2 tsp black pepper, 1–2 tsp cayenne pepper (optional)",
+          "1 tbsp olive oil"
+        ]
+      },
+      {
+        "name": "For the Pasta & Sauce",
+        "items": [
+          "8 oz (225 g) rigatoni",
+          "3 tbsp butter",
+          "1 large shallot, finely diced",
+          "6–8 garlic cloves, minced",
+          "1 cup heavy cream, room temperature",
+          "Seasoning: 1 tsp chicken bouillon powder, 1 tsp paprika, 1 tsp garlic powder, 1 tsp Italian seasoning, 1 tsp black pepper",
+          "3/4 cup freshly grated Parmesan (please use fresh!)",
+          "1/2 cup pasta water, as needed (aka liquid gold)"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -720,7 +921,8 @@
           "Add the pasta & 1/4 cup pasta water, toss over low heat for 1–2 mins until the sauce is silky. Add more pasta water as needed. Slice the chicken, add it on top, and finish with more parm and fresh parsley!"
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "caramelized-onion-and-garlic-spaghetti",
@@ -728,16 +930,21 @@
     "source": "https://www.instagram.com/reels/DLQKCZ1Pdmc/",
     "image": "images/caramelized-onion-and-garlic-spaghetti.jpg",
     "ingredients": [
-      "1 large onion, thinly sliced",
-      "4 garlic cloves, minced",
-      "2 tbsp chili crisp",
-      "1 cup of cream or coconut milk, room temperature",
-      "1 tbsp soy sauce, optional",
-      "1/2 cup fresh Parmesan cheese, grated",
-      "8 oz (225g) pasta of your choice",
-      "2 tbsp butter",
-      "1 tbsp olive oil",
-      "Seasonings (1 tsp each): paprika, garlic powder, salt, pepper, italian seasoning"
+      {
+        "name": "",
+        "items": [
+          "1 large onion, thinly sliced",
+          "4 garlic cloves, minced",
+          "2 tbsp chili crisp",
+          "1 cup of cream or coconut milk, room temperature",
+          "1 tbsp soy sauce, optional",
+          "1/2 cup fresh Parmesan cheese, grated",
+          "8 oz (225g) pasta of your choice",
+          "2 tbsp butter",
+          "1 tbsp olive oil",
+          "Seasonings (1 tsp each): paprika, garlic powder, salt, pepper, italian seasoning"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -751,7 +958,8 @@
           "Serve hot with an extra spoon of chili crisp on top for a spicy kick and maybe a sprinkle of fresh parsley if you’re feelin’ fancy."
         ]
       }
-    ]
+    ],
+    "category": "Vegetarian"
   },
   {
     "id": "honey-garlic-salmon-bowls-with-creamy-sriracha",
@@ -759,25 +967,40 @@
     "source": "https://www.instagram.com/reel/DT3iH2Ck7jQ/",
     "image": "images/honey-garlic-salmon-bowls-with-creamy-sriracha.jpg",
     "ingredients": [
-      "12 oz (340 g) fresh salmon, cubed",
-      "Salmon seasonings: 1 tsp salt, 1 tsp black pepper, 1 tsp paprika, 2 tsp chili powder, 2 tsp garlic powder, & 1 tsp onion powder",
-      "8 garlic cloves, minced",
-      "2 tbsp honey",
-      "2 tbsp avocado oil",
-      "1/4 cup soy sauce",
-      "1½ tbsp rice vinegar",
-      "1 tbsp fresh ginger, grated",
-      "4 mini cucumbers (or 1 large cucumber)",
-      "1 tbsp soy sauce + 1 tbsp rice vinegar",
-      "3 garlic cloves, minced",
-      "1 tbsp white sugar",
-      "2 tsp toasted sesame seeds",
-      "2 tbsp chili crisp",
-      "1 tsp sesame oil (optional, but recommended)",
-      "Creamy sriracha sauce from @primalkitchenfoods",
-      "Cooked rice (jasmine is elite here)",
-      "Sesame seeds & sliced green onions",
-      "Sliced avocado, grated carrot & edamame"
+      {
+        "name": "For the salmon",
+        "items": [
+          "12 oz (340 g) fresh salmon, cubed",
+          "Salmon seasonings: 1 tsp salt, 1 tsp black pepper, 1 tsp paprika, 2 tsp chili powder, 2 tsp garlic powder, & 1 tsp onion powder",
+          "8 garlic cloves, minced",
+          "2 tbsp honey",
+          "2 tbsp avocado oil",
+          "1/4 cup soy sauce",
+          "1½ tbsp rice vinegar",
+          "1 tbsp fresh ginger, grated"
+        ]
+      },
+      {
+        "name": "For the cucumber salad",
+        "items": [
+          "4 mini cucumbers (or 1 large cucumber)",
+          "1 tbsp soy sauce + 1 tbsp rice vinegar",
+          "3 garlic cloves, minced",
+          "1 tbsp white sugar",
+          "2 tsp toasted sesame seeds",
+          "2 tbsp chili crisp",
+          "1 tsp sesame oil (optional, but recommended)"
+        ]
+      },
+      {
+        "name": "For plating",
+        "items": [
+          "Creamy sriracha sauce from @primalkitchenfoods",
+          "Cooked rice (jasmine is elite here)",
+          "Sesame seeds & sliced green onions",
+          "Sliced avocado, grated carrot & edamame"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -789,7 +1012,8 @@
           "Assembly: Over a bed of rice, add the salmon bites, cucumber salad, avocado, carrots, & edamame. Finish with sesame seeds, green onions & lots of creamy sriracha sauce!"
         ]
       }
-    ]
+    ],
+    "category": "Seafood"
   },
   {
     "id": "pad-kra-pao",
@@ -797,19 +1021,24 @@
     "source": "https://www.instagram.com/p/C4dooVKp-Ax/",
     "image": "images/pad-kra-pao.jpg",
     "ingredients": [
-      "1 tbsp light soy sauce",
-      "1/2 tsp dark soy sauce",
-      "1 tbsp fish sauce",
-      "1 tbsp oyster sauce",
-      "1.5 tbsp palm sugar",
-      "6 cloves garlic",
-      "5-7 red Thai chillies",
-      "3/4 cup long beans(cut into small pieces)",
-      "1/4 cup neutral oil",
-      "2-3 eggs",
-      "1 lbs ground pork/chicken/beef",
-      "2 cups holy basil or Thai Basil",
-      "Hot jasmine rice"
+      {
+        "name": "",
+        "items": [
+          "1 tbsp light soy sauce",
+          "1/2 tsp dark soy sauce",
+          "1 tbsp fish sauce",
+          "1 tbsp oyster sauce",
+          "1.5 tbsp palm sugar",
+          "6 cloves garlic",
+          "5-7 red Thai chillies",
+          "3/4 cup long beans(cut into small pieces)",
+          "1/4 cup neutral oil",
+          "2-3 eggs",
+          "1 lbs ground pork/chicken/beef",
+          "2 cups holy basil or Thai Basil",
+          "Hot jasmine rice"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -823,7 +1052,8 @@
           "Cook for a few minutes until leaves are wilted and serve with rice and the fried egg on top."
         ]
       }
-    ]
+    ],
+    "category": "Chicken"
   },
   {
     "id": "autumn-harvest-honeycrisp-apple-and-feta-salad",
@@ -831,26 +1061,36 @@
     "source": "https://www.halfbakedharvest.com/autumn-harvest-honeycrisp-apple-and-feta-salad/",
     "image": "images/autumn-harvest-honeycrisp-apple-and-feta-salad.jpg",
     "ingredients": [
-      "1/4 cup raw pecans",
-      "2 tablespoons pumpkin seeds",
-      "3 tablespoons maple syrup",
-      "1/2 teaspoon cayenne pepper",
-      "1/4 teaspoon ground cinnamon",
-      "flaky sea salt",
-      "3 ounces thinly sliced prosciutto",
-      "6 cups arugula or shredded kale",
-      "2 honeycrisp apples, thinly sliced",
-      "1 avocado, diced",
-      "arils from 1 pomegranate",
-      "1/2 cup crumbled feta cheese",
-      "1/3 cup extra virgin olive oil",
-      "1/4 cup apple cider vinegar",
-      "1 tablespoon dijon mustard",
-      "1 tablespoon apple butter (optional)",
-      "2 teaspoons honey or maple syrup",
-      "1 tablespoon fresh thyme leaves",
-      "2 teaspoons chopped fresh sage",
-      "kosher salt and black pepper"
+      {
+        "name": "",
+        "items": [
+          "1/4 cup raw pecans",
+          "2 tablespoons pumpkin seeds",
+          "3 tablespoons maple syrup",
+          "1/2 teaspoon cayenne pepper",
+          "1/4 teaspoon ground cinnamon",
+          "flaky sea salt",
+          "3 ounces thinly sliced prosciutto",
+          "6 cups arugula or shredded kale",
+          "2 honeycrisp apples, thinly sliced",
+          "1 avocado, diced",
+          "arils from 1 pomegranate",
+          "1/2 cup crumbled feta cheese"
+        ]
+      },
+      {
+        "name": "Apple Vinaigrette",
+        "items": [
+          "1/3 cup extra virgin olive oil",
+          "1/4 cup apple cider vinegar",
+          "1 tablespoon dijon mustard",
+          "1 tablespoon apple butter (optional)",
+          "2 teaspoons honey or maple syrup",
+          "1 tablespoon fresh thyme leaves",
+          "2 teaspoons chopped fresh sage",
+          "kosher salt and black pepper"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -863,7 +1103,8 @@
           "Pour the vinaigrette over the salad, tossing to combine. Top the salad with toasted nuts, prosciutto, and feta. Eat and enjoy!"
         ]
       }
-    ]
+    ],
+    "category": "Vegetarian"
   },
   {
     "id": "asian-burger-with-hoisin-ketchup",
@@ -871,33 +1112,58 @@
     "source": "https://carlsbadcravings.com/asian-burger-recipe/",
     "image": "images/asian-burger-with-hoisin-ketchup.jpg",
     "ingredients": [
-      "4 hamburger buns",
-      "1 tablespoon olive oil",
-      "1 pound lean ground beef",
-      "1 large egg",
-      "1/2 cup panko bread crumbs",
-      "1/2 cup chopped red onion",
-      "1-3 teaspoons Asian chili garlic sauce ((like Sambal Oelek)*)",
-      "1 tablespoon reduced sodium soy sauce",
-      "1 tablespoon quality hoisin (Lee Kum Kee or Kikkoman)",
-      "1 tablespoon lime juice",
-      "1/2 tablespoon brown sugar",
-      "1 tsp EACH salt, dried basil, garlic pwdr",
-      "1/2 teaspoon ground ginger",
-      "1/4 teaspoon pepper",
-      "1/2 cup mayonnaise",
-      "1 teaspoon Asian chili garlic sauce (optional)",
-      "1/4 cup ketchup",
-      "1 tablespoons hoisin sauce",
-      "1 tablespoon reduced sodium soy sauce",
-      "1/2 tablespoons lime juice",
-      "4 cups angel hair coleslaw ((may sub regular)**)",
-      "1 cup Matchstick carrots",
-      "2 teaspoons rice vinegar",
-      "1 teaspoon reduced soy sauce",
-      "1 teaspoon lime juice",
-      "1/2 teaspoon sugar",
-      "1/2 teaspoon sesame oil"
+      {
+        "name": "",
+        "items": [
+          "4 hamburger buns",
+          "1 tablespoon olive oil"
+        ]
+      },
+      {
+        "name": "Asian Hamburgers",
+        "items": [
+          "1 pound lean ground beef",
+          "1 large egg",
+          "1/2 cup panko bread crumbs",
+          "1/2 cup chopped red onion",
+          "1-3 teaspoons Asian chili garlic sauce ((like Sambal Oelek)*)",
+          "1 tablespoon reduced sodium soy sauce",
+          "1 tablespoon quality hoisin (Lee Kum Kee or Kikkoman)",
+          "1 tablespoon lime juice",
+          "1/2 tablespoon brown sugar",
+          "1 tsp EACH salt, dried basil, garlic pwdr",
+          "1/2 teaspoon ground ginger",
+          "1/4 teaspoon pepper"
+        ]
+      },
+      {
+        "name": "Chili Garlic Mayonnaise",
+        "items": [
+          "1/2 cup mayonnaise",
+          "1 teaspoon Asian chili garlic sauce (optional)"
+        ]
+      },
+      {
+        "name": "Hoisin Ketchup",
+        "items": [
+          "1/4 cup ketchup",
+          "1 tablespoons hoisin sauce",
+          "1 tablespoon reduced sodium soy sauce",
+          "1/2 tablespoons lime juice"
+        ]
+      },
+      {
+        "name": "Asian Slaw",
+        "items": [
+          "4 cups angel hair coleslaw ((may sub regular)**)",
+          "1 cup Matchstick carrots",
+          "2 teaspoons rice vinegar",
+          "1 teaspoon reduced soy sauce",
+          "1 teaspoon lime juice",
+          "1/2 teaspoon sugar",
+          "1/2 teaspoon sesame oil"
+        ]
+      }
     ],
     "instructions": [
       {
@@ -911,6 +1177,351 @@
           "Spread hamburger buns with Chili Garlic Mayonnaise, top with Asian hamburgers, top with Hoisin Ketchup followed by Asian Slaw and dig in!"
         ]
       }
-    ]
+    ],
+    "category": "Beef"
+  },
+  {
+    "id": "best-bolognese-sauce-recipe",
+    "name": "Best Bolognese Sauce Recipe",
+    "source": "https://carlsbadcravings.com/bolognese-sauce/",
+    "image": "images/best-bolognese-sauce-recipe.jpg",
+    "ingredients": [
+      {
+        "name": "",
+        "items": [
+          "1 pound mild Italian sausage, (bulk or casings removed )",
+          "1 pound lean ground beef",
+          "1 medium yellow onion",
+          "1 carrot",
+          "1 stalk celery",
+          "6-8 garlic cloves (minced)",
+          "1/2-1 teaspoon red pepper flakes",
+          "1 28 oz. can crushed tomatoes",
+          "1 15 oz. can tomato sauce",
+          "2 tablespoons tomato paste",
+          "1 teaspoon balsamic vinegar",
+          "1/4 cup water",
+          "1 tablespoon dried parsley",
+          "2 teaspoons chicken bouillon (crushed cubes, powder, or base)",
+          "1 1/2 teaspoons dried oregano",
+          "1 tsp EACH salt, sugar, (plus more to taste)",
+          "1/2 tsp EACH dried thyme, pepper",
+          "1 bay leaf"
+        ]
+      },
+      {
+        "name": "ADD LATER",
+        "items": [
+          "1/4 cup chopped basil, (or 1 TBS dried added with other spices)",
+          "1/4 cup heavy cream",
+          "Freshly grated Parmesan cheese (for serving)"
+        ]
+      },
+      {
+        "name": "Pasta",
+        "items": [
+          "1 pound pasta (optional)"
+        ]
+      },
+      {
+        "name": "ADD LATER",
+        "items": [
+          "Freshly grated Parmesan cheese for serving"
+        ]
+      }
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Roughly chop the onion, celery, and carrot so that they fit in your food processor. Pulse until finely chopped (about 12 pulses), or chop by hand.",
+          "In a Dutch oven, brown the ground beef, sausage, and onion/celery/carrots over medium heat. Add the garlic and red pepper flakes and cook for 30 more seconds. Drain grease.",
+          "Add the remaining sauce ingredients EXCEPT for the fresh basil and heavy cream (add the dried basil at this time, if using).",
+          "Bring to a simmer over medium-high heat, then reduce to low. Simmer uncovered over low heat for 30-45 minutes, stirring occasionally until reduced and thickened to the desired consistency. Stir more often towards the end of cooking to prevent the sauce from burning.",
+          "Stir in the heavy cream and fresh basil; cook an additional 3 minutes. Taste and season with additional salt, pepper, sugar, or red pepper flakes to taste (I like more salt). Serve with pasta and plenty of freshly grated Parmesan cheese."
+        ]
+      }
+    ],
+    "category": "Beef"
+  },
+  {
+    "id": "summer-pasta-with-zucchini-ricotta-and-basil",
+    "name": "Summer Pasta With Zucchini, Ricotta and Basil",
+    "source": "https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil",
+    "image": "images/summer-pasta-with-zucchini-ricotta-and-basil.webp",
+    "ingredients": [
+      {
+        "name": "",
+        "items": [
+          "Extra-virgin olive oil",
+          "1 small onion, finely diced",
+          "2 pounds zucchini, sliced into ¼-inch-thick pieces (for larger zucchini, cut in half lengthwise before slicing)",
+          "Salt and pepper",
+          "2 garlic cloves, minced, or 2 tablespoons chopped green garlic",
+          "1 ounce basil, about 2 cups loose leaves",
+          "1 pound ziti or other dry pasta",
+          "8 ounces ricotta, about 1 cup (see recipe)",
+          "Pinch of crushed red pepper",
+          "Zest of 1 lemon",
+          "2 ounces grated Parmesan, pecorino or a mixture, about 1 cup, plus more for serving"
+        ]
+      }
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Put a pot of water on to boil. In a large skillet over medium-high heat, cook the onions in 3 tablespoons olive oil until softened, 5 to 8 minutes. Reduce heat as necessary to keep onions from browning. Add zucchini, season generously with salt and pepper, and continue cooking, stirring occasionally until rather soft, about 10 minutes. Turn off heat.",
+          "Meanwhile, use a mortar and pestle to pound garlic, basil and a little salt into a rough paste (or use a mini food processor). Stir in 3 tablespoons olive oil.",
+          "Salt the pasta water well and put in the pasta, stirring. Boil per package instructions but make sure to keep pasta quite al dente. Drain pasta, reserving 1 cup of cooking water.",
+          "Add cooked pasta to zucchini in skillet and turn heat to medium-high. Add ½ cup cooking water, then the ricotta, crushed red pepper and lemon zest, stirring to distribute. Check seasoning and adjust. Cook for 1 minute more. Mixture should look creamy. Add a little more pasta water if necessary. Add the basil paste and half the grated cheese and quickly stir to incorporate. Spoon pasta into warm soup plates and sprinkle with additional cheese. Serve immediately."
+        ]
+      }
+    ],
+    "category": "Vegetarian"
+  },
+  {
+    "id": "buttermilk-pancakes",
+    "name": "Buttermilk Pancakes",
+    "source": "https://tastesbetterfromscratch.com/buttermilk-pancakes/",
+    "image": "images/buttermilk-pancakes.jpg",
+    "ingredients": [
+      {
+        "name": "",
+        "items": [
+          "2 cups all-purpose flour",
+          "2 Tablespoons granulated sugar",
+          "1½ teaspoons baking powder",
+          "¾ teaspoon baking soda",
+          "½ teaspoon salt",
+          "2 cups buttermilk",
+          "2 large eggs (, beaten)",
+          "2 Tablespoons melted butter",
+          "2 Tablespoons milk (, to thin batter)",
+          "blueberries or chocolate chips, for topping before flipping (, optional)"
+        ]
+      }
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Heat griddle to 350 degrees F (or heat a large skillet to medium). Grease with butter or non-stick cooking spray.",
+          "Combine dry ingredients in large bowl: flour, sugar, baking powder, baking soda, salt.",
+          "Add buttermilk, eggs and melted butter and mix just until wet and dry ingredients are incorporated. You don't want to over-mix the batter. Add milk, a little at a time until batter is still thick, but pourable.",
+          "Cook: Use a ¼ cup measuring cup to scoop batter and pour on hot, greased griddle (top with chocolate chips or blueberries, if desired). Cook pancakes until bubbles appear on the surface, then flip once.",
+          "Serve warm with our easy homemade pancake syrup."
+        ]
+      }
+    ],
+    "category": "Breakfast"
+  },
+  {
+    "id": "classic-french-crepes-easy-crepes-recipe",
+    "name": "Classic French Crepes (Easy Crepes Recipe)",
+    "source": "https://www.theflavorbender.com/classic-french-crepes/",
+    "image": "images/classic-french-crepes-easy-crepes-recipe.jpg",
+    "ingredients": [
+      {
+        "name": "Classic French Crepes",
+        "items": [
+          "1 ¼ cup milk (10 fl oz)",
+          "3 large eggs",
+          "2 tbsp oil or melted butter",
+          "2 tsp sugar for savory crepes, OR",
+          "3 tbsp sugar for sweet dessert crepes",
+          "½ tsp kosher salt",
+          "4 oz all purpose flour (scant 1 cup (see recipe note))"
+        ]
+      },
+      {
+        "name": "To Cook",
+        "items": [
+          "2 tbsp softened butter (or oil (more as needed))"
+        ]
+      },
+      {
+        "name": "Lemon and Sugar Crepes",
+        "items": [
+          "1 - 2 lemons (sliced thick or cut into wedges)",
+          "¼ cup vanilla sugar",
+          "Whipped cream"
+        ]
+      }
+    ],
+    "instructions": [
+      {
+        "name": "Mixing with a whisk",
+        "steps": [
+          "Place the milk and eggs in a jug/bowl. Whisk to combine (you should have about 2 cups of liquid).",
+          "Add the oil or butter and whisk it in.",
+          "Place the flour, salt and sugar in a large bowl.",
+          "Add about ¾ - 1 cup of the liquid and mix gently to form a smooth paste. This should not take more than a few seconds. Take care not to over-mix.",
+          "Add the rest of the liquid and mix to form a smooth, watery batter.",
+          "Cover the batter and let it rest for at least 20 - 30 minutes. The batter can be kept in the fridge overnight as well (or upto 2 days)"
+        ]
+      },
+      {
+        "name": "Mixing with a blender",
+        "steps": [
+          "Add the ingredients into the blender. Add the flour last. Blend for a few seconds until you have a smooth batter. You can use a stick blender as well for this purpose.",
+          "Cover the batter and let it rest for at least 20 - 30 minutes. The batter can be kept in the fridge overnight as well (or upto 2 days)"
+        ]
+      },
+      {
+        "name": "Cooking the crepes",
+        "steps": [
+          "Preheat a 10 inch non-stick pan over medium heat.",
+          "Brush a layer of butter on the heated pan. I used a silicone brush, but you can use a butter soaked paper towel or cloth as well.",
+          "Always mix the batter first, before you make each crepe. This is to make sure the batter is uniformly mixed.",
+          "Pour ¼ cup of the batter into the hot pan, and swirl to coat the bottom of the pan. Swirl and spread the batter along the edge of the pan first and then fill the middle with the remaining crepe batter. Make sure the batter is as evenly spread as possible.",
+          "Place the pan back on the heat to let the crepe cook.",
+          "For extra soft crepes - cook the crepes only until they are just set at the surface (about 30 seconds) and there's no browning on the edges. You can flip over the crepe gently, and cook for a few seconds on the other side (optional), or remove the crepe from pan and place it on a plate.",
+          "For classic crepes - cook the crepes until the edges are starting to brown become a little crisp (about 40 seconds). Flip the crepes over and cook for a further 10 - 15 seconds on the other side until the crepes have caramelized spots.",
+          "Repeat until all the batter is used up (remember to mix the batter each time).",
+          "Stack the cooked crepes on a plate or wire rack."
+        ]
+      },
+      {
+        "name": "Serving",
+        "steps": [
+          "If the crepes are no longer warm when you're ready to serve them, place another plate over your stack of crepes and microwave for about 30 seconds until the crepes are warm. Then remove the second plate quickly so that the crepes don't become soggy with steam/moisture.",
+          "Serve the crepes with any kind of filling you like. Or you can follow the steps below for lemon and sugar crepes."
+        ]
+      },
+      {
+        "name": "Lemon and sugar crepes",
+        "steps": [
+          "Place a crepe on a plate or flat surface.",
+          "Sprinkle about 1 tsp of sugar over one half of the crepe and fold over in half. Then fold over one more time into quarters. Repeat with all the crepes.",
+          "Serve the French crepes with fresh lemon slices (that can be squeezed over the crepes before eating), and whipped cream."
+        ]
+      }
+    ],
+    "category": "Breakfast"
+  },
+  {
+    "id": "best-chocolate-chip-cookies",
+    "name": "Best Chocolate Chip Cookies",
+    "source": "https://cooking.nytimes.com/recipes/1015819-chocolate-chip-cookies",
+    "image": "images/best-chocolate-chip-cookies.webp",
+    "ingredients": [
+      {
+        "name": "",
+        "items": [
+          "2 cups minus 2 tablespoons cake flour (8 ½ ounces)",
+          "1 ⅔ cups bread flour (8 ½ ounces)",
+          "1 ¼ teaspoons baking soda",
+          "1 ½ teaspoons baking powder",
+          "1 ½ teaspoons coarse sea salt, plus more for sprinkling",
+          "1 ¼ cups unsalted butter (2 ½ sticks)",
+          "1 ¼ cups light brown sugar (10 ounces)",
+          "1 cup plus 2 tablespoons granulated sugar (8 ounces)",
+          "2 large eggs",
+          "2 teaspoons natural vanilla extract",
+          "1 ¼ pounds bittersweet chocolate disks or fèves, at least 60 percent cacao content (see note)"
+        ]
+      }
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Sift flours, baking soda, baking powder and salt into a bowl. Set aside.",
+          "Using a mixer fitted with paddle attachment, cream butter and sugars together until very light, about 5 minutes. Add eggs, one at a time, mixing well after each addition. Stir in the vanilla. Reduce speed to low, add dry ingredients and mix until just combined, 5 to 10 seconds. Drop chocolate pieces in and incorporate them without breaking them. Press plastic wrap against dough and refrigerate for 24 to 36 hours. Dough may be used in batches, and can be refrigerated for up to 72 hours.",
+          "When ready to bake, preheat oven to 350 degrees. Line a baking sheet with parchment paper or a nonstick baking mat. Set aside.",
+          "Scoop 6 3 ½-ounce mounds of dough (the size of generous golf balls) onto baking sheet, making sure to turn horizontally any chocolate pieces that are poking up; it will make for a more attractive cookie. Sprinkle lightly with salt and bake until golden brown but still soft, 18 to 20 minutes. Transfer sheet to a wire rack for 10 minutes, then slip cookies onto another rack to cool a bit more. Repeat with remaining dough, or reserve dough, refrigerated, for baking remaining batches the next day. Eat warm, with a big napkin."
+        ]
+      }
+    ],
+    "category": "Dessert"
+  },
+  {
+    "id": "butter-chicken-recipe",
+    "name": "Butter Chicken Recipe",
+    "source": "https://cafedelites.com/butter-chicken/",
+    "image": "images/butter-chicken-recipe.jpg",
+    "ingredients": [
+      {
+        "name": "For the chicken marinade",
+        "items": [
+          "28 oz boneless and skinless chicken thighs or breasts (cut into bite-sized pieces)",
+          "1/2 cup plain yogurt",
+          "1 1/2 tablespoons garlic (minced )",
+          "1 tablespoon ginger (minced, or finely grated)",
+          "2 teaspoons garam masala",
+          "1 teaspoon turmeric",
+          "1 teaspoon ground cumin",
+          "1 teaspoon red chili powder (recommend Kashmiri)",
+          "1 teaspoon salt"
+        ]
+      },
+      {
+        "name": "For the sauce",
+        "items": [
+          "2 tablespoons olive oil",
+          "2 tablespoons ghee (or 1 tbs butter + 1 tbs oil)",
+          "1 large onion (sliced or chopped)",
+          "1 1/2 tablespoons garlic (minced)",
+          "1 tablespoon ginger (minced or finely grated)",
+          "1 1/2 teaspoons ground cumin",
+          "1 1/2 teaspoons garam masala",
+          "1 teaspoon ground coriander",
+          "14 oz crushed tomatoes",
+          "1 teaspoon red chili powder (adjust to your taste preference (use Kashmiri))",
+          "1 1/4 teaspoons salt (or to taste)",
+          "1 cup thickened cream (heavy or evaporated milk to save calories)",
+          "1 tablespoon sugar",
+          "1/2 teaspoon kasoori methi (or dried fenugreek leaves)"
+        ]
+      }
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "In a bowl, combine chicken with all of the ingredients for the chicken marinade; let marinate for 30 minutes to an hour (or overnight if time allows).",
+          "Heat oil in a large skillet or pot over medium-high heat. When sizzling, add chicken pieces in batches of two or three, making sure not to crowd the pan. Fry until browned for only 3 minutes on each side. Set aside and keep warm. (You will finish cooking the chicken in the sauce.)",
+          "Heat the butter or ghee in the same pan and fry the onions until they start to sweat (about 6 minutes), making sure to scrape up any browned bits stuck to the bottom. Add the garlic and ginger, sautéing for 1 minute, then stir in the ground coriander, cumin, and garam masala. Cook for another 20 seconds until highly fragrant, then pour in the crushed tomatoes, chili powder, and salt.",
+          "Remove from heat, scoop mixture into a blender and blend until smooth. You may need to add a couple tablespoons of water to help it blend (up to 1/4 cup). Work in batches depending on the size of your blender.",
+          "Pour the puréed sauce back into the pan. Stir the cream, sugar and crushed kasoori methi (or fenugreek leaves) through the sauce. Add the chicken with juices back into the pan and cook for an additional 8-10 minutes until chicken is cooked through and the sauce is thick and bubbling.",
+          "Garnish with chopped cilantro and serve with fresh homemade Naan Bread!"
+        ]
+      }
+    ],
+    "category": "Chicken"
+  },
+  {
+    "id": "buttermilk-marinated-roast-chicken",
+    "name": "Buttermilk-Marinated Roast Chicken",
+    "source": "https://www.saltfatacidheat.com/buttermilkmarinated-roast-chicken",
+    "image": null,
+    "ingredients": [
+      {
+        "name": "",
+        "items": [
+          "3½- to 4-pound (about 1.5 kilograms) chicken",
+          "Salt",
+          "2 cups (475 ml) buttermilk"
+        ]
+      }
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "The day before you want to cook the chicken, remove the wingtips by cutting through the first wing joint with poultry shears or a sharp knife. Reserve for stock. Season the chicken generously with salt and let it sit for 30 minutes.",
+          "Stir 2 tablespoons of kosher salt or 4 teaspoons fine sea salt into the buttermilk to dissolve. Place the chicken in a gallon-size resealable plastic bag and pour in the buttermilk. If the chicken won’t fit in a gallon-size bag, double up two plastic produce bags to prevent leakage and tie the bag with a piece of twine.",
+          "Seal it, squish the buttermilk all around the chicken, place on a rimmed plate, and refrigerate. If you’re so inclined, over the next 24 hours you can turn the bag so every part of the chicken gets marinated, but that’s not essential.",
+          "Pull the chicken from the fridge an hour before you plan to cook it. Preheat the oven to 425°F (220°C), with a rack set in the center position.",
+          "Remove the chicken from the plastic bag and scrape off as much buttermilk as you can without being obsessive. Tightly tie together the legs of the chicken with a piece of butcher’s twine. Place the chicken in a 10-inch cast iron skillet or shallow roasting pan.",
+          "Slide the pan all the way to the back of the oven on the center rack. Rotate the pan so that the legs are pointing toward the rear left corner and the breast is pointing toward the center of the oven (the back corners tend to be the hottest spots in the oven, so this orientation protects the breast from overcooking before the legs are done). Pretty soon you should hear the chicken sizzling.",
+          "After about 20 minutes, when the chicken starts to brown, reduce the heat to 400°F and continue roasting for 10 minutes and then move the pan so the legs are facing the back right corner of the oven.",
+          "Continue cooking for another 30 minutes or so, until the chicken is brown all over and the juices run clear when you insert a knife down to the bone between the leg and the thigh.",
+          "When the chicken’s done, remove it to a platter and let it rest for 10 minutes before carving and serving."
+        ]
+      }
+    ],
+    "category": "Chicken"
   }
 ]
