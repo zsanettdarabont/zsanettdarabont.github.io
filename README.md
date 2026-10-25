@@ -16,6 +16,8 @@ A static GitHub Pages site showing the recipes Zsanett cooks most: a grid of squ
 
 Some sites (e.g. Half Baked Harvest) block scripts. For those, `pip install playwright` and the script opens the page in your Chrome automatically. Or save the page from your browser and run `python3 scripts/extract_recipes.py URL --html saved-page.html`.
 
+The home page groups recipes into Chicken, Seafood, Beef, Vegetarian, Dessert and Breakfast. The script guesses the group from the dish name and ingredients; to move a recipe, change its `category` in `data/recipes.json` (re-running the script keeps your choice).
+
 Instagram posts and reels work too: the script reads the recipe from the caption (bulleted ingredients and numbered steps) and uses the cover photo. This also needs Playwright.
 
 To remove a recipe, delete its entry from `data/recipes.json` and its image.

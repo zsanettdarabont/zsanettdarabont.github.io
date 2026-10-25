@@ -12,26 +12,35 @@ const RecipeBox = (() => {
   };
 
   const domain = url => new URL(url).hostname.replace(/^www\./, '');
+  const CATEGORIES = ['Chicken', 'Seafood', 'Beef', 'Vegetarian', 'Dessert', 'Breakfast'];
+  const allIngredients = r => r.ingredients.flatMap(g => g.items);
 
   async function renderGrid() {
     const grid = document.getElementById('grid');
     const search = document.getElementById('search');
     const recipes = await load();
 
+    const card = r =>
+      el('li', { class: 'card' },
+        el('a', { href: `recipe.html?r=${encodeURIComponent(r.id)}` },
+          el('div', { class: 'thumb' },
+            r.image ? el('img', { src: r.image, alt: r.name, loading: 'lazy' }) : ''),
+          el('div', { class: 'card-body' },
+            el('h3', {}, r.name),
+            el('span', { class: 'source' }, domain(r.source)))));
+
     const draw = query => {
       const q = query.trim().toLowerCase();
       const shown = recipes.filter(r =>
         !q || r.name.toLowerCase().includes(q) ||
-        r.ingredients.some(i => i.toLowerCase().includes(q)));
-      grid.replaceChildren(...shown.map(r =>
-        el('li', { class: 'card' },
-          el('a', { href: `recipe.html?r=${encodeURIComponent(r.id)}` },
-            el('div', { class: 'thumb' },
-              r.image ? el('img', { src: r.image, alt: r.name, loading: 'lazy' }) : ''),
-            el('div', { class: 'card-body' },
-              el('h2', {}, r.name),
-              el('span', { class: 'source' }, domain(r.source)))))));
-      if (!shown.length) grid.append(el('li', { class: 'empty' }, 'No recipes match.'));
+        allIngredients(r).some(i => i.toLowerCase().includes(q)));
+      const groups = CATEGORIES.map(cat => [cat, shown.filter(r => r.category === cat)])
+        .filter(([, list]) => list.length);
+      grid.replaceChildren(...groups.map(([cat, list]) =>
+        el('section', { class: 'group' },
+          el('h2', { class: 'group-title' }, cat),
+          el('ul', { class: 'grid' }, ...list.map(card)))));
+      if (!shown.length) grid.append(el('p', { class: 'empty' }, 'No recipes match.'));
     };
 
     search.addEventListener('input', () => draw(search.value));
@@ -48,8 +57,15 @@ const RecipeBox = (() => {
     }
     document.title = `${r.name} · Zsanett's Kitchen`;
 
-    const ingredients = el('ul', { class: 'ingredients' }, ...r.ingredients.map((text, i) =>
-      el('li', {}, el('label', {}, el('input', { type: 'checkbox', id: `ing-${i}` }), el('span', {}, text)))));
+    let n = 0;
+    const ingredients = el('div', { class: 'ingredient-groups' });
+    for (const group of r.ingredients) {
+      if (group.name) ingredients.append(el('h3', {}, group.name));
+      ingredients.append(el('ul', { class: 'ingredients' }, ...group.items.map(text => {
+        const id = `ing-${n++}`;
+        return el('li', {}, el('label', {}, el('input', { type: 'checkbox', id }), el('span', {}, text)));
+      })));
+    }
 
     const method = el('div', { class: 'method' });
     for (const section of r.instructions) {

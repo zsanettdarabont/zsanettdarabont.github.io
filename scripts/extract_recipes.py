@@ -16,6 +16,7 @@ import html
 import json
 import os
 import re
+import string
 import sys
 import urllib.error
 import urllib.parse
@@ -135,6 +136,41 @@ def recipe_from_html(page):
     return None
 
 
+def recipe_from_wprm(page):
+    """Read a WP Recipe Maker card straight from the HTML, for sites that turn off its schema data."""
+    start = page.find('class="wprm-recipe-container')
+    if start < 0:
+        return None
+    card = page[start:]
+    name = re.search(r'class="wprm-recipe-name[^"]*"[^>]*>(.*?)</', card, re.DOTALL)
+    name = clean(name.group(1)) if name else ""
+    if name.isupper():
+        name = string.capwords(name.lower())
+    img = re.search(r'class="wprm-recipe-image[^"]*">\s*<img[^>]*>', card)
+    image = None
+    if img:
+        srcset = re.search(r'srcset="([^"]+)"', img.group(0))
+        if srcset:
+            sizes = [c.strip().rsplit(" ", 1) for c in srcset.group(1).split(",")]
+            image = max(sizes, key=lambda c: int(c[1].rstrip("w")) if len(c) > 1 else 0)[0]
+        else:
+            image = re.search(r'src="([^"]+)"', img.group(0)).group(1)
+    ingredients = [
+        re.sub(r"<[^>]+>", " ", li)
+        for li in re.findall(r'<li[^>]*class="wprm-recipe-ingredient"[^>]*>(.*?)</li>', card, re.DOTALL)
+    ]
+    sections = []
+    for group in card.split('<div class="wprm-recipe-instruction-group')[1:]:
+        head = re.search(r'wprm-recipe-group-name[^>]*>(.*?)</h\d>', group.split("<li", 1)[0], re.DOTALL)
+        texts = re.findall(r'class="wprm-recipe-instruction-text"[^>]*>(.*?)</div>', group, re.DOTALL)
+        sections.append({
+            "@type": "HowToSection",
+            "name": clean(head.group(1)) if head else "",
+            "itemListElement": [{"@type": "HowToStep", "text": t} for t in texts],
+        })
+    return {"name": name, "image": image, "recipeIngredient": ingredients, "recipeInstructions": sections}
+
+
 def image_url(image):
     if isinstance(image, str):
         return image
@@ -190,25 +226,78 @@ def instagram_recipe(url):
 def recipe_from_caption(url, caption, image):
     lines = [l.strip() for l in caption.splitlines()][1:]  # first line is the account name
     lines = [l for l in lines if l]
-    name, ingredients, steps = None, [], []
+    name, groups, steps = None, [{"name": "", "items": []}], []
     for line in lines:
         if line.startswith("View all"):
             break
         name = name or re.sub(r"[^\w)!?'’]+$", "", line)
         if m := re.match(r"[-*•]\s*(.+)", line):
-            ingredients.append(clean(m.group(1)))
+            groups[-1]["items"].append(clean(m.group(1)))
         elif m := re.match(r"\d{1,2}[.)]\s+(.+)", line):
             steps.append(clean(m.group(1)))
-    if not ingredients or not steps:
+        elif (m := re.fullmatch(r"(.{2,40}):", line)) and not steps and not re.fullmatch(
+            r"ingredients|instructions|directions|method", m.group(1), re.IGNORECASE
+        ):
+            groups.append({"name": clean(m.group(1)), "items": []})
+    groups = [g for g in groups if g["items"]]
+    if not groups or not steps:
         raise ValueError("couldn't find ingredients and numbered steps in the caption")
     return {
         "id": slugify(name),
         "name": name,
         "source": url,
         "image": image,
-        "ingredients": ingredients,
+        "ingredients": groups,
         "instructions": [{"name": "", "steps": steps}],
     }
+
+
+CATEGORIES = ["Chicken", "Seafood", "Beef", "Vegetarian", "Dessert", "Breakfast"]
+_WORDS = {
+    "Breakfast": r"pancake|crepe|waffle|french toast|oatmeal|granola|omelet|frittata|muffin|scone",
+    "Dessert": r"cookie|cake|brownie|blondie|tart|pudding|ice cream|fudge|dessert",
+    "Seafood": r"salmon|shrimp|scampi|fish|cod|tuna|prawn|crab|lobster|scallop|halibut|tilapia",
+    "Chicken": r"chicken|turkey",
+    "Beef": r"beef|steak|birria|bolognese|burger|meatball|keftedes|pork|lamb|sirloin|brisket|chuck",
+}
+# Ingredients that name a meat without being one.
+_NOT_MEAT = re.compile(r"broth|stock|bouillon|fish sauce|oyster sauce|anchov", re.IGNORECASE)
+
+
+def guess_category(name, ingredients):
+    """Best guess at the site section: dish name first, then the ingredient list."""
+    for cat in ("Breakfast", "Dessert", "Seafood", "Chicken", "Beef"):
+        if re.search(rf"\b(?:{_WORDS[cat]})", name, re.IGNORECASE):
+            return cat
+    text = " ".join(i for i in ingredients if not _NOT_MEAT.search(i))
+    for cat in ("Seafood", "Chicken", "Beef"):
+        if re.search(rf"\b(?:{_WORDS[cat]})", text, re.IGNORECASE):
+            return cat
+    return "Vegetarian"
+
+
+def ingredient_groups(page, ingredients):
+    """Split the flat JSON-LD list using the page's WP Recipe Maker groups (e.g. Salad / Dressing)."""
+    start = page.find('<div class="wprm-recipe-ingredient-group')
+    end = page.find("wprm-recipe-instructions-container", start)
+    parts = page[start:end].split('<div class="wprm-recipe-ingredient-group')[1:] if start >= 0 else []
+    groups = []
+    for part in parts:
+        head = part.split("<li", 1)[0]
+        m = re.search(r'wprm-recipe-group-name[^>]*>(.*?)</h\d>', head, re.DOTALL)
+        name = clean(m.group(1)).rstrip(":").strip() if m else ""
+        groups.append((name, len(re.findall(r'<li[^>]*class="wprm-recipe-ingredient"', part))))
+    if len(groups) < 2 or sum(n for _, n in groups) != len(ingredients):
+        return [{"name": "", "items": ingredients}]
+    out, i = [], 0
+    for name, n in groups:
+        out.append({"name": name, "items": ingredients[i:i + n]})
+        i += n
+    return [g for g in out if g["items"]]
+
+
+def flat(groups):
+    return [i for g in groups for i in g["items"]]
 
 
 def slugify(text):
@@ -216,7 +305,7 @@ def slugify(text):
 
 
 def extract(url, page):
-    recipe = recipe_from_html(page)
+    recipe = recipe_from_html(page) or recipe_from_wprm(page)
     if not recipe:
         raise ValueError("no schema.org Recipe found on the page")
     name = clean(recipe.get("name", "")) or "Untitled recipe"
@@ -230,7 +319,7 @@ def extract(url, page):
         "name": name,
         "source": url,
         "image": urllib.parse.urljoin(url, img) if img else None,
-        "ingredients": ingredients,
+        "ingredients": ingredient_groups(page, ingredients),
         "instructions": steps,
     }
 
@@ -243,6 +332,9 @@ def save_image(recipe):
         body, content_type = fetch(recipe["image"])
     except Exception as exc:
         print(f"warn  couldn't download photo ({exc}); linking to it instead", file=sys.stderr)
+        return recipe["image"]
+    if not content_type.startswith("image/"):
+        print(f"warn  photo URL returned {content_type}, not an image; linking to it instead", file=sys.stderr)
         return recipe["image"]
     ext = {"image/png": ".png", "image/webp": ".webp", "image/avif": ".avif"}.get(
         content_type, ".jpg"
@@ -289,8 +381,13 @@ def main(argv=None):
             while recipe["id"] in taken:
                 recipe["id"], n = f"{base}-{n}", n + 1
             recipe["image"] = save_image(recipe)
+            old = by_source.get(url, {})
+            recipe["category"] = old.get("category") or guess_category(
+                recipe["name"], flat(recipe["ingredients"])
+            )
             by_source[url] = recipe
-            print(f"ok    {recipe['name']}  ({len(recipe['ingredients'])} ingredients)")
+            print(f"ok    {recipe['name']}  [{recipe['category']}]  "
+                  f"({len(flat(recipe['ingredients']))} ingredients)")
         except Exception as exc:  # keep going so one bad site doesn't stop the rest
             failures += 1
             print(f"FAIL  {url}: {exc}", file=sys.stderr)
