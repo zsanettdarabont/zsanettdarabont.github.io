@@ -1492,17 +1492,17 @@
     "category": "Chicken"
   },
   {
-    "id": "buttermilk-marinated-roast-chicken",
-    "name": "Buttermilk-Marinated Roast Chicken",
-    "source": "https://www.saltfatacidheat.com/buttermilkmarinated-roast-chicken",
-    "image": null,
+    "id": "samin-s-buttermilk-marinated-roast-chicken",
+    "name": "Samin's Buttermilk Marinated Roast Chicken",
+    "source": "https://www.thebeaderchef.com/samins-buttermilk-marinated-roast-chicken/",
+    "image": "images/samin-s-buttermilk-marinated-roast-chicken.jpg",
     "ingredients": [
       {
         "name": "",
         "items": [
-          "3½- to 4-pound (about 1.5 kilograms) chicken",
-          "Salt",
-          "2 cups (475 ml) buttermilk"
+          "1 3-4 lb. chicken",
+          "2 cups buttermilk",
+          "2 tbsp kosher salt (plus more for seasoning)"
         ]
       }
     ],
@@ -1510,15 +1510,14 @@
       {
         "name": "",
         "steps": [
-          "The day before you want to cook the chicken, remove the wingtips by cutting through the first wing joint with poultry shears or a sharp knife. Reserve for stock. Season the chicken generously with salt and let it sit for 30 minutes.",
-          "Stir 2 tablespoons of kosher salt or 4 teaspoons fine sea salt into the buttermilk to dissolve. Place the chicken in a gallon-size resealable plastic bag and pour in the buttermilk. If the chicken won’t fit in a gallon-size bag, double up two plastic produce bags to prevent leakage and tie the bag with a piece of twine.",
-          "Seal it, squish the buttermilk all around the chicken, place on a rimmed plate, and refrigerate. If you’re so inclined, over the next 24 hours you can turn the bag so every part of the chicken gets marinated, but that’s not essential.",
-          "Pull the chicken from the fridge an hour before you plan to cook it. Preheat the oven to 425°F (220°C), with a rack set in the center position.",
-          "Remove the chicken from the plastic bag and scrape off as much buttermilk as you can without being obsessive. Tightly tie together the legs of the chicken with a piece of butcher’s twine. Place the chicken in a 10-inch cast iron skillet or shallow roasting pan.",
-          "Slide the pan all the way to the back of the oven on the center rack. Rotate the pan so that the legs are pointing toward the rear left corner and the breast is pointing toward the center of the oven (the back corners tend to be the hottest spots in the oven, so this orientation protects the breast from overcooking before the legs are done). Pretty soon you should hear the chicken sizzling.",
-          "After about 20 minutes, when the chicken starts to brown, reduce the heat to 400°F and continue roasting for 10 minutes and then move the pan so the legs are facing the back right corner of the oven.",
-          "Continue cooking for another 30 minutes or so, until the chicken is brown all over and the juices run clear when you insert a knife down to the bone between the leg and the thigh.",
-          "When the chicken’s done, remove it to a platter and let it rest for 10 minutes before carving and serving."
+          "The night before pat chicken dry and salt liberally, rest at room temperature for 30 minutes.",
+          "In a plastic bag mix together the buttermilk and 2 tbsp. of salt. Add the chicken, seal and coat. Marinate in the fridge for at least 18 hours (you can turn it over a couple of times but it is not necessary).",
+          "An hour before cooking, remove chicken from the fridge. Preheat oven to 425F with the rack set at the center of the oven.",
+          "Remove the chicken from the marinade removing excess liquid. Tightly tie the legs together with butcher's twine. Place the chicken in a cast-iron skillet with the legs opposite to the handle or on a rimmed baking sheet equipped with a wire rack with the legs facing a corner.",
+          "Place the skillet or baking sheet at the back of the oven so that the legs are facing the back corner while the breasts are facing the center of the oven.",
+          "Cook the chicken for about 20 minutes, at that point the skin should start to brown. Reduce the temperature to 400F and roast for 10 minutes more and then move the chicken so that the legs face the opposite back corner.",
+          "Continue cooking the chicken for 30 minutes more or until the juices run clear and an instant-read thermometer inserted at the thickest part of the thigh reads 165F.",
+          "Once cooked, remove from the oven and let sit for 10 minutes before carving and serving."
         ]
       }
     ],

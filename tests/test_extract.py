@@ -110,5 +110,22 @@ class ExtractTest(unittest.TestCase):
         self.assertEqual(g("Skillet Dinner", ["1 lb ground beef"]), "Beef")
 
 
+    def test_wprm_card_without_schema(self):
+        page = (
+            '<div class="wprm-recipe-container"><h2 class="wprm-recipe-name">SAMIN\'S ROAST CHICKEN</h2>'
+            '<div class="wprm-recipe-image"><img src="/s.jpg" srcset="/s.jpg 300w, /l.jpg 768w"></div>'
+            '<div class="wprm-recipe-ingredient-group"><ul>'
+            '<li class="wprm-recipe-ingredient"><span>2</span> <span>cups</span> <span>buttermilk</span></li>'
+            '</ul></div><div class="wprm-recipe-instructions-container">'
+            '<div class="wprm-recipe-instruction-group"><ol><li>'
+            '<div class="wprm-recipe-instruction-text"><p>Marinate overnight.</p></div></li></ol></div>'
+        )
+        r = ex.extract("https://example.com/chicken", page)
+        self.assertEqual(r["name"], "Samin's Roast Chicken")
+        self.assertEqual(r["image"], "https://example.com/l.jpg")
+        self.assertEqual(r["ingredients"], [{"name": "", "items": ["2 cups buttermilk"]}])
+        self.assertEqual(r["instructions"], [{"name": "", "steps": ["Marinate overnight."]}])
+
+
 if __name__ == "__main__":
     unittest.main()

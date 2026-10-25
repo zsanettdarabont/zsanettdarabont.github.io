@@ -16,6 +16,7 @@ import html
 import json
 import os
 import re
+import string
 import sys
 import urllib.error
 import urllib.parse
@@ -133,6 +134,41 @@ def recipe_from_html(page):
         if recipe:
             return recipe
     return None
+
+
+def recipe_from_wprm(page):
+    """Read a WP Recipe Maker card straight from the HTML, for sites that turn off its schema data."""
+    start = page.find('class="wprm-recipe-container')
+    if start < 0:
+        return None
+    card = page[start:]
+    name = re.search(r'class="wprm-recipe-name[^"]*"[^>]*>(.*?)</', card, re.DOTALL)
+    name = clean(name.group(1)) if name else ""
+    if name.isupper():
+        name = string.capwords(name.lower())
+    img = re.search(r'class="wprm-recipe-image[^"]*">\s*<img[^>]*>', card)
+    image = None
+    if img:
+        srcset = re.search(r'srcset="([^"]+)"', img.group(0))
+        if srcset:
+            sizes = [c.strip().rsplit(" ", 1) for c in srcset.group(1).split(",")]
+            image = max(sizes, key=lambda c: int(c[1].rstrip("w")) if len(c) > 1 else 0)[0]
+        else:
+            image = re.search(r'src="([^"]+)"', img.group(0)).group(1)
+    ingredients = [
+        re.sub(r"<[^>]+>", " ", li)
+        for li in re.findall(r'<li[^>]*class="wprm-recipe-ingredient"[^>]*>(.*?)</li>', card, re.DOTALL)
+    ]
+    sections = []
+    for group in card.split('<div class="wprm-recipe-instruction-group')[1:]:
+        head = re.search(r'wprm-recipe-group-name[^>]*>(.*?)</h\d>', group.split("<li", 1)[0], re.DOTALL)
+        texts = re.findall(r'class="wprm-recipe-instruction-text"[^>]*>(.*?)</div>', group, re.DOTALL)
+        sections.append({
+            "@type": "HowToSection",
+            "name": clean(head.group(1)) if head else "",
+            "itemListElement": [{"@type": "HowToStep", "text": t} for t in texts],
+        })
+    return {"name": name, "image": image, "recipeIngredient": ingredients, "recipeInstructions": sections}
 
 
 def image_url(image):
@@ -269,7 +305,7 @@ def slugify(text):
 
 
 def extract(url, page):
-    recipe = recipe_from_html(page)
+    recipe = recipe_from_html(page) or recipe_from_wprm(page)
     if not recipe:
         raise ValueError("no schema.org Recipe found on the page")
     name = clean(recipe.get("name", "")) or "Untitled recipe"
@@ -296,6 +332,9 @@ def save_image(recipe):
         body, content_type = fetch(recipe["image"])
     except Exception as exc:
         print(f"warn  couldn't download photo ({exc}); linking to it instead", file=sys.stderr)
+        return recipe["image"]
+    if not content_type.startswith("image/"):
+        print(f"warn  photo URL returned {content_type}, not an image; linking to it instead", file=sys.stderr)
         return recipe["image"]
     ext = {"image/png": ".png", "image/webp": ".webp", "image/avif": ".avif"}.get(
         content_type, ".jpg"
