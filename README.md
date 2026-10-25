@@ -96,3 +96,7 @@ Then open http://localhost:8000.
 ```
 python3 -m unittest discover -s tests
 ```
+
+## This week's menu
+
+Tap **+** on a recipe card, or **Add to this week's menu** on a recipe page, then open **This week's menu**. It shows a shopping list sorted into Trader Joe's-style sections (`js/aisles.js`), with items you can tick off. The menu and ticks are saved in that browser only. JS tests: `node --test tests/aisles.test.js`.
