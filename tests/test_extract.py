@@ -68,5 +68,23 @@ class ExtractTest(unittest.TestCase):
             self.assertEqual(ex.fetch("https://example.com"), (b"<html>hi</html>", "text/html"))
 
 
+    def test_recipe_from_instagram_caption(self):
+        caption = (
+            "cook_account\n\nPad Kra Pao 🔥\n\nComment \u201cRecipe\u201d for the card!\n"
+            "For the sauce:\n-1 tbsp fish sauce\n* 1.5 tbsp palm sugar\n"
+            "Instructions\n1. Mix the sauce.\n2. Fry and serve.\n#thaifood\nView all 577 comments"
+        )
+        r = ex.recipe_from_caption("https://www.instagram.com/p/X/", caption, "https://cdn/x.jpg")
+        self.assertEqual(r["name"], "Pad Kra Pao")
+        self.assertEqual(r["ingredients"], ["1 tbsp fish sauce", "1.5 tbsp palm sugar"])
+        self.assertEqual(r["instructions"], [{"name": "", "steps": ["Mix the sauce.", "Fry and serve."]}])
+        self.assertEqual(r["image"], "https://cdn/x.jpg")
+
+    def test_instagram_url_shapes(self):
+        for u in ("https://www.instagram.com/p/C4dooVKp-Ax/", "https://www.instagram.com/reels/DLQKCZ1Pdmc/",
+                  "https://www.instagram.com/reel/DT3iH2Ck7jQ/?igsh=x"):
+            self.assertTrue(ex.INSTAGRAM.search(u))
+
+
 if __name__ == "__main__":
     unittest.main()

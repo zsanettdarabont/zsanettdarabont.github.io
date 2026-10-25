@@ -40,6 +40,7 @@ LD_JSON = re.compile(
     r"<script[^>]*type=[\"']?application/ld\+json[\"']?[^>]*>(.*?)</script>",
     re.IGNORECASE | re.DOTALL,
 )
+INSTAGRAM = re.compile(r"instagram\.com/(?:p|reels?|tv)/([\w-]+)")
 TAG = re.compile(r"<[^>]+>")
 # "1. Preheat oven.2. Toss..." -> split before each "N." that starts a sentence.
 NUMBERED = re.compile(r"(?:^|(?<=[.!?)]))\s*\d{1,2}\.\s*(?=[A-Z])")
@@ -61,6 +62,11 @@ def fetch_page(url):
         if exc.code not in (403, 503):
             raise
     # Bot protection (e.g. Cloudflare): load the page in a real Chrome window.
+    return in_chrome(url)
+
+
+def in_chrome(url, script=None, wait_for=None):
+    """Open url in a visible Chrome window; return the HTML, or the result of script."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -79,10 +85,12 @@ def fetch_page(url):
             if "Just a moment" not in page.title():
                 break
             page.wait_for_timeout(1000)
+        if wait_for:
+            page.wait_for_selector(wait_for, timeout=30000)
         page.wait_for_timeout(1500)
-        content = page.content()
+        result = page.evaluate(script) if script else page.content()
         browser.close()
-    return content
+    return result
 
 
 def clean(text):
@@ -165,6 +173,44 @@ def parse_steps(node):
     return [s for s in sections if s["steps"]]
 
 
+def instagram_recipe(url):
+    """Instagram posts have no recipe data; read the caption and cover photo instead."""
+    code = INSTAGRAM.search(url).group(1)
+    post = in_chrome(
+        f"https://www.instagram.com/p/{code}/embed/captioned/",
+        script="""() => ({
+            caption: document.querySelector('.Caption')?.innerText || '',
+            image: document.querySelector('.EmbeddedMediaImage')?.src || null,
+        })""",
+        wait_for=".Caption",
+    )
+    return recipe_from_caption(url, post["caption"], post["image"])
+
+
+def recipe_from_caption(url, caption, image):
+    lines = [l.strip() for l in caption.splitlines()][1:]  # first line is the account name
+    lines = [l for l in lines if l]
+    name, ingredients, steps = None, [], []
+    for line in lines:
+        if line.startswith("View all"):
+            break
+        name = name or re.sub(r"[^\w)!?'’]+$", "", line)
+        if m := re.match(r"[-*•]\s*(.+)", line):
+            ingredients.append(clean(m.group(1)))
+        elif m := re.match(r"\d{1,2}[.)]\s+(.+)", line):
+            steps.append(clean(m.group(1)))
+    if not ingredients or not steps:
+        raise ValueError("couldn't find ingredients and numbered steps in the caption")
+    return {
+        "id": slugify(name),
+        "name": name,
+        "source": url,
+        "image": image,
+        "ingredients": ingredients,
+        "instructions": [{"name": "", "steps": steps}],
+    }
+
+
 def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:60] or "recipe"
 
@@ -230,11 +276,14 @@ def main(argv=None):
 
     for url in urls:
         try:
-            if args.html:
-                page = Path(args.html).read_text(errors="replace")
+            if INSTAGRAM.search(url) and not args.html:
+                recipe = instagram_recipe(url)
             else:
-                page = fetch_page(url)
-            recipe = extract(url, page)
+                if args.html:
+                    page = Path(args.html).read_text(errors="replace")
+                else:
+                    page = fetch_page(url)
+                recipe = extract(url, page)
             taken = {r["id"] for s, r in by_source.items() if s != url}
             base, n = recipe["id"], 2
             while recipe["id"] in taken:
