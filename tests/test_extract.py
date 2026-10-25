@@ -1,5 +1,7 @@
+import gzip
 import sys
 import unittest
+from unittest import mock
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -54,6 +56,16 @@ class ExtractTest(unittest.TestCase):
     def test_page_without_recipe(self):
         with self.assertRaises(ValueError):
             ex.extract("https://example.com", "<html><body>no recipe</body></html>")
+
+
+    def test_unzips_gzip_pages(self):
+        resp = mock.MagicMock()
+        resp.__enter__.return_value = resp
+        resp.read.return_value = gzip.compress(b"<html>hi</html>")
+        resp.headers.get.return_value = "gzip"
+        resp.headers.get_content_type.return_value = "text/html"
+        with mock.patch.object(ex.urllib.request, "urlopen", return_value=resp):
+            self.assertEqual(ex.fetch("https://example.com"), (b"<html>hi</html>", "text/html"))
 
 
 if __name__ == "__main__":
