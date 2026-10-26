@@ -99,4 +99,8 @@ python3 -m unittest discover -s tests
 
 ## Shopping List
 
-Tap **+** on a recipe card, or **Add to Shopping List** on a recipe page, then open **Shopping List**. It shows the chosen recipes and a grocery list sorted into Trader Joe's-style sections (`js/aisles.js`), with items you can tick off. It lists just the ingredient name, merges repeats, folds spices into one line, and skips salt, pepper, oil and water. The list and ticks are saved in that browser only. JS tests: `node --test tests/aisles.test.js`.
+Tap **+** on a recipe card, or **Add to Shopping List** on a recipe page, then open **Shopping List**. It shows the chosen recipes and a grocery list sorted into Trader Joe's-style sections (`js/aisles.js`), with items you can tick off. It lists just the ingredient name, merges repeats, folds spices into one line, and skips salt, pepper, oil and water. Type your own items (e.g. paper towels) into the box at the top of the list; they get a "My items" section. The list, your items and ticks are saved in that browser only. JS tests: `node --test tests/aisles.test.js`.
+
+## Cook mode
+
+On a recipe page, tap **Cook mode**: the page goes to one column with bigger text, the screen stays on (Wake Lock, where the browser supports it), and you tap each step when it's done; the next step is highlighted.

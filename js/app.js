@@ -47,9 +47,12 @@ const RecipeBox = (() => {
     return btn;
   };
 
+  const slug = cat => `cat-${cat.toLowerCase()}`;
+
   async function renderGrid() {
     const grid = document.getElementById('grid');
     const search = document.getElementById('search');
+    const jump = document.getElementById('jump');
     const recipes = await load();
     updateMenuCount();
 
@@ -70,8 +73,9 @@ const RecipeBox = (() => {
         allIngredients(r).some(i => i.toLowerCase().includes(q)));
       const groups = CATEGORIES.map(cat => [cat, shown.filter(r => r.category === cat)])
         .filter(([, list]) => list.length);
+      jump.replaceChildren(...groups.map(([cat]) => el('a', { href: `#${slug(cat)}` }, cat)));
       grid.replaceChildren(...groups.map(([cat, list]) =>
-        el('section', { class: 'group' },
+        el('section', { class: 'group', id: slug(cat) },
           el('h2', { class: 'group-title' }, cat),
           el('ul', { class: 'grid' }, ...list.map(card)))));
       if (!shown.length) grid.append(el('p', { class: 'empty' }, 'No recipes match.'));
@@ -107,6 +111,48 @@ const RecipeBox = (() => {
       if (section.name) method.append(el('h3', {}, section.name));
       method.append(el('ol', {}, ...section.steps.map(s => el('li', {}, s))));
     }
+    const steps = [...method.querySelectorAll('li')];
+    const markCurrent = () => {
+      const next = steps.find(li => !li.classList.contains('done'));
+      steps.forEach(li => li.classList.toggle('current', li === next));
+    };
+    method.addEventListener('click', e => {
+      const li = e.target.closest('li');
+      if (!li || !document.body.classList.contains('cook')) return;
+      li.classList.toggle('done');
+      markCurrent();
+    });
+
+    let wakeLock = null;
+    const keepAwake = async () => {
+      try { wakeLock = await navigator.wakeLock.request('screen'); } catch { wakeLock = null; }
+    };
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && document.body.classList.contains('cook')) keepAwake();
+    });
+    const cookBtn = el('button', { class: 'btn btn-cook', type: 'button' });
+    const cookNote = el('p', { class: 'cook-note' });
+    const setCook = on => {
+      document.body.classList.toggle('cook', on);
+      cookBtn.textContent = on ? 'Exit cook mode' : 'Cook mode';
+      cookBtn.setAttribute('aria-pressed', on);
+      if (on) {
+        markCurrent();
+        if ('wakeLock' in navigator) {
+          keepAwake();
+          cookNote.textContent = 'Screen stays on. Tap a step when it\'s done.';
+        } else {
+          cookNote.textContent = 'Tap a step when it\'s done. This browser can\'t keep the screen on.';
+        }
+        window.scrollTo({ top: 0 });
+      } else {
+        wakeLock?.release();
+        wakeLock = null;
+        steps.forEach(li => li.classList.remove('current'));
+      }
+    };
+    cookBtn.addEventListener('click', () => setCook(!document.body.classList.contains('cook')));
+    setCook(false);
 
     const printBtn = el('button', { class: 'btn', type: 'button' }, 'Print recipe');
     printBtn.addEventListener('click', () => window.print());
@@ -120,7 +166,8 @@ const RecipeBox = (() => {
             el('h1', {}, r.name),
             el('p', { class: 'source' }, 'Recipe from ',
               el('a', { href: r.source, target: '_blank', rel: 'noopener' }, domain(r.source))),
-            el('div', { class: 'actions' }, menuButton(r, false), printBtn))),
+            el('div', { class: 'actions' }, cookBtn, menuButton(r, false), printBtn),
+            cookNote)),
         el('div', { class: 'recipe-body' },
           el('section', {}, el('h2', {}, 'Ingredients'), ingredients),
           el('section', {}, el('h2', {}, 'Instructions'), method))));
@@ -133,39 +180,59 @@ const RecipeBox = (() => {
     const draw = () => {
       updateMenuCount();
       const chosen = menu().map(id => recipes.find(r => r.id === id)).filter(Boolean);
-      if (!chosen.length) {
-        root.replaceChildren(
-          el('h1', {}, 'Shopping List'),
-          el('p', { class: 'empty' }, 'Nothing here yet. Tap + on any recipe to add it. ',
-            el('a', { href: './' }, 'Browse recipes')));
-        return;
-      }
+      const extras = store.get('zk-extra', []);
 
-      const list = el('ul', { class: 'menu-list' }, ...chosen.map(r => {
-        const remove = el('button', { class: 'remove', type: 'button', 'aria-label': `Remove ${r.name}` }, '×');
-        remove.addEventListener('click', () => { toggleMenu(r.id); draw(); });
-        return el('li', {},
-          r.image ? el('img', { src: r.image, alt: '' }) : el('span', { class: 'menu-thumb' }),
-          el('a', { href: `recipe.html?r=${encodeURIComponent(r.id)}` }, r.name),
-          remove);
-      }));
+      const list = chosen.length
+        ? el('ul', { class: 'menu-list' }, ...chosen.map(r => {
+          const remove = el('button', { class: 'remove', type: 'button', 'aria-label': `Remove ${r.name}` }, '×');
+          remove.addEventListener('click', () => { toggleMenu(r.id); draw(); });
+          return el('li', {},
+            r.image ? el('img', { src: r.image, alt: '' }) : el('span', { class: 'menu-thumb' }),
+            el('a', { href: `recipe.html?r=${encodeURIComponent(r.id)}` }, r.name),
+            remove);
+        }))
+        : el('p', { class: 'empty' }, 'No recipes yet. Tap + on any recipe to add it. ',
+          el('a', { href: './' }, 'Browse recipes'));
 
       const aisles = Aisles.shoppingList(chosen);
-      const keys = new Set(aisles.flatMap(([, list]) => list.map(x => x.key)));
+      const own = extras.map(x => ({ key: `extra:${x.id}`, name: x.name, from: [], extra: x.id }));
+      if (own.length) aisles.unshift(['My items', own]);
+      const keys = new Set(aisles.flatMap(([, items]) => items.map(x => x.key)));
       const checked = new Set(store.get('zk-checked', []).filter(k => keys.has(k)));
       store.set('zk-checked', [...checked]);
 
-      const shopping = el('div', { class: 'shopping' });
-      for (const [aisle, list] of aisles) {
-        shopping.append(el('h3', {}, aisle), el('ul', { class: 'ingredients' }, ...list.map(item => {
+      const input = el('input', { type: 'text', placeholder: 'Add your own item (e.g. paper towels)', 'aria-label': 'Item name', enterkeyhint: 'done' });
+      const addForm = el('form', { class: 'add-item' }, input, el('button', { class: 'btn', type: 'submit' }, 'Add'));
+      addForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const name = input.value.trim();
+        if (!name) return;
+        store.set('zk-extra', [...extras, { id: Date.now().toString(36), name }]);
+        draw();
+        root.querySelector('.add-item input').focus();
+      });
+
+      const shopping = el('div', { class: 'shopping' }, addForm);
+      for (const [aisle, items] of aisles) {
+        shopping.append(el('h3', {}, aisle), el('ul', { class: 'ingredients' }, ...items.map(item => {
           const box = el('input', { type: 'checkbox' });
           box.checked = checked.has(item.key);
           box.addEventListener('change', () => {
             box.checked ? checked.add(item.key) : checked.delete(item.key);
             store.set('zk-checked', [...checked]);
           });
-          return el('li', {}, el('label', {}, box,
-            el('span', {}, item.name, el('small', { class: 'from' }, item.from.join(' · ')))));
+          const row = el('li', {}, el('label', {}, box,
+            el('span', {}, item.name, item.from.length ? el('small', { class: 'from' }, item.from.join(' · ')) : '')));
+          if (item.extra) {
+            const remove = el('button', { class: 'remove', type: 'button', 'aria-label': `Remove ${item.name}` }, '×');
+            remove.addEventListener('click', () => {
+              store.set('zk-extra', store.get('zk-extra', []).filter(x => x.id !== item.extra));
+              draw();
+            });
+            row.classList.add('own');
+            row.append(remove);
+          }
+          return row;
         })));
       }
 
