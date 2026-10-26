@@ -97,6 +97,6 @@ Then open http://localhost:8000.
 python3 -m unittest discover -s tests
 ```
 
-## This week's menu
+## Shopping List
 
-Tap **+** on a recipe card, or **Add to this week's menu** on a recipe page, then open **This week's menu**. It shows a shopping list sorted into Trader Joe's-style sections (`js/aisles.js`), with items you can tick off. It lists just the ingredient name, merges repeats, folds spices into one line, and skips salt, pepper, oil and water. The menu and ticks are saved in that browser only. JS tests: `node --test tests/aisles.test.js`.
+Tap **+** on a recipe card, or **Add to Shopping List** on a recipe page, then open **Shopping List**. It shows the chosen recipes and a grocery list sorted into Trader Joe's-style sections (`js/aisles.js`), with items you can tick off. It lists just the ingredient name, merges repeats, folds spices into one line, and skips salt, pepper, oil and water. The list and ticks are saved in that browser only. JS tests: `node --test tests/aisles.test.js`.

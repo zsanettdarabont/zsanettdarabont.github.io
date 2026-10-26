@@ -126,6 +126,11 @@ class ExtractTest(unittest.TestCase):
         self.assertEqual(r["ingredients"], [{"name": "", "items": ["2 cups buttermilk"]}])
         self.assertEqual(r["instructions"], [{"name": "", "steps": ["Marinate overnight."]}])
 
+    def test_drop_recipe_word(self):
+        self.assertEqual(ex.drop_recipe_word("Butter Chicken Recipe"), "Butter Chicken")
+        self.assertEqual(ex.drop_recipe_word("Orzo Pasta Salad Recipe with Feta"), "Orzo Pasta Salad with Feta")
+        self.assertEqual(ex.drop_recipe_word("Classic French Crepes (Easy Crepes Recipe)"), "Classic French Crepes (Easy Crepes)")
+
 
 if __name__ == "__main__":
     unittest.main()

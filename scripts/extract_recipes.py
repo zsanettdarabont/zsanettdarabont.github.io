@@ -242,6 +242,7 @@ def recipe_from_caption(url, caption, image):
     groups = [g for g in groups if g["items"]]
     if not groups or not steps:
         raise ValueError("couldn't find ingredients and numbered steps in the caption")
+    name = drop_recipe_word(name)
     return {
         "id": slugify(name),
         "name": name,
@@ -300,6 +301,13 @@ def flat(groups):
     return [i for g in groups for i in g["items"]]
 
 
+def drop_recipe_word(name):
+    """'Butter Chicken Recipe' -> 'Butter Chicken'."""
+    name = re.sub(r"\s*\brecipes?\b", "", name, flags=re.IGNORECASE)
+    name = re.sub(r"\(\s*\)", "", name)
+    return re.sub(r"\s+", " ", name).strip(" -–:|") or "Untitled"
+
+
 def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:60] or "recipe"
 
@@ -314,6 +322,7 @@ def extract(url, page):
     if not ingredients or not steps:
         raise ValueError("recipe is missing ingredients or steps")
     img = image_url(recipe.get("image"))
+    name = drop_recipe_word(name)
     return {
         "id": slugify(name),
         "name": name,

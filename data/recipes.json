@@ -61,7 +61,7 @@
   },
   {
     "id": "lime-chicken-cilantro-recipe",
-    "name": "Lime Chicken Cilantro Recipe",
+    "name": "Lime Chicken Cilantro",
     "source": "https://carlsbadcravings.com/cilantro-lime-chicken/",
     "image": "images/lime-chicken-cilantro-recipe.jpg",
     "ingredients": [
@@ -157,7 +157,7 @@
   },
   {
     "id": "creamy-tuscan-salmon-recipe",
-    "name": "Creamy Tuscan Salmon Recipe",
+    "name": "Creamy Tuscan Salmon",
     "source": "https://carlsbadcravings.com/tuscan-salmon/",
     "image": "images/creamy-tuscan-salmon-recipe.jpg",
     "ingredients": [
@@ -209,7 +209,7 @@
   },
   {
     "id": "orzo-pasta-salad-recipe-with-feta",
-    "name": "Orzo Pasta Salad Recipe with Feta",
+    "name": "Orzo Pasta Salad with Feta",
     "source": "https://carlsbadcravings.com/orzo-pasta-salad/",
     "image": "images/orzo-pasta-salad-recipe-with-feta.jpg",
     "ingredients": [
@@ -963,7 +963,7 @@
   },
   {
     "id": "honey-garlic-salmon-bowls-with-creamy-sriracha",
-    "name": "Honey Garlic Salmon Bowls with Creamy Sriracha",
+    "name": "Honey Garlic Salmon Bowls with Creamy Sriracha",
     "source": "https://www.instagram.com/reel/DT3iH2Ck7jQ/",
     "image": "images/honey-garlic-salmon-bowls-with-creamy-sriracha.jpg",
     "ingredients": [
@@ -1182,7 +1182,7 @@
   },
   {
     "id": "best-bolognese-sauce-recipe",
-    "name": "Best Bolognese Sauce Recipe",
+    "name": "Best Bolognese Sauce",
     "source": "https://carlsbadcravings.com/bolognese-sauce/",
     "image": "images/best-bolognese-sauce-recipe.jpg",
     "ingredients": [
@@ -1318,7 +1318,7 @@
   },
   {
     "id": "classic-french-crepes-easy-crepes-recipe",
-    "name": "Classic French Crepes (Easy Crepes Recipe)",
+    "name": "Classic French Crepes (Easy Crepes)",
     "source": "https://www.theflavorbender.com/classic-french-crepes/",
     "image": "images/classic-french-crepes-easy-crepes-recipe.jpg",
     "ingredients": [
@@ -1438,7 +1438,7 @@
   },
   {
     "id": "butter-chicken-recipe",
-    "name": "Butter Chicken Recipe",
+    "name": "Butter Chicken",
     "source": "https://cafedelites.com/butter-chicken/",
     "image": "images/butter-chicken-recipe.jpg",
     "ingredients": [
