@@ -15,7 +15,7 @@ const RecipeBox = (() => {
   const CATEGORIES = ['Chicken', 'Seafood', 'Beef', 'Vegetarian', 'Dessert', 'Breakfast'];
   const allIngredients = r => r.ingredients.flatMap(g => g.items);
 
-  // This week's menu and shopping-list ticks live in this browser only.
+  // The Shopping List recipes and ticks live in this browser only.
   const store = {
     get: (key, fallback) => {
       try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
@@ -37,10 +37,10 @@ const RecipeBox = (() => {
     const btn = el('button', { class: compact ? 'add-btn' : 'btn btn-menu', type: 'button' });
     const sync = () => {
       const on = menu().includes(r.id);
-      btn.textContent = compact ? (on ? '✓' : '+') : (on ? '✓ On this week\'s menu' : '+ Add to this week\'s menu');
+      btn.textContent = compact ? (on ? '✓' : '+') : (on ? '✓ On Shopping List' : '+ Add to Shopping List');
       btn.classList.toggle('on', on);
       btn.setAttribute('aria-pressed', on);
-      btn.setAttribute('aria-label', on ? `Remove ${r.name} from this week's menu` : `Add ${r.name} to this week's menu`);
+      btn.setAttribute('aria-label', on ? `Remove ${r.name} from Shopping List` : `Add ${r.name} to Shopping List`);
     };
     btn.addEventListener('click', e => { e.preventDefault(); toggleMenu(r.id); sync(); });
     sync();
@@ -135,7 +135,7 @@ const RecipeBox = (() => {
       const chosen = menu().map(id => recipes.find(r => r.id === id)).filter(Boolean);
       if (!chosen.length) {
         root.replaceChildren(
-          el('h1', {}, 'This week\'s menu'),
+          el('h1', {}, 'Shopping List'),
           el('p', { class: 'empty' }, 'Nothing here yet. Tap + on any recipe to add it. ',
             el('a', { href: './' }, 'Browse recipes')));
         return;
@@ -173,9 +173,9 @@ const RecipeBox = (() => {
       reset.addEventListener('click', () => { store.set('zk-checked', []); draw(); });
 
       root.replaceChildren(
-        el('h1', {}, 'This week\'s menu'),
+        el('h1', {}, 'Shopping List'),
         list,
-        el('div', { class: 'list-head' }, el('h2', {}, 'Shopping list'), reset),
+        el('div', { class: 'list-head' }, el('h2', {}, 'Groceries'), reset),
         shopping);
     };
     draw();
