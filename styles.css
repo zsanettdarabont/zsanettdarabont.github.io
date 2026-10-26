@@ -81,6 +81,17 @@ a { color: var(--accent); }
   .recipe-title h1 { font-size: 1.7rem; }
   .recipe-body { gap: 24px; }
 }
+@media (max-width: 600px) {
+  .wrap { padding: 0 12px 40px; }
+  .site-header { padding: 24px 12px 16px; margin-bottom: 20px; }
+  .group { margin-bottom: 28px; }
+  .group-title { font-size: 1.3rem; margin-bottom: 12px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .card-body { padding: 8px 10px 10px; }
+  .card h3 { font-size: .95rem; margin-bottom: 2px; }
+  .card .source { font-size: .65rem; }
+  .add-btn { top: 6px; right: 6px; width: 30px; height: 30px; font-size: 1.1rem; }
+}
 
 @media print {
   .site-header, .back, .btn, .add-btn { display: none; }
