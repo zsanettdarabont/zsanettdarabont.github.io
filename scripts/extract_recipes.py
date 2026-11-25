@@ -303,6 +303,7 @@ def flat(groups):
 
 def drop_recipe_word(name):
     """'Butter Chicken Recipe' -> 'Butter Chicken'."""
+    name = re.sub(r"^\s*recipes?\s+(for|of)\s+", "", name, flags=re.IGNORECASE)
     name = re.sub(r"\s*\brecipes?\b", "", name, flags=re.IGNORECASE)
     name = re.sub(r"\(\s*\)", "", name)
     return re.sub(r"\s+", " ", name).strip(" -–:|") or "Untitled"
