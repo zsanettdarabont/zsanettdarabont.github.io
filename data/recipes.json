@@ -523,7 +523,7 @@
         ]
       }
     ],
-    "category": "Vegetarian"
+    "category": "Chicken"
   },
   {
     "id": "shawarma-chicken",
@@ -1522,5 +1522,52 @@
       }
     ],
     "category": "Chicken"
+  },
+  {
+    "id": "mediterranean-salad",
+    "name": "Mediterranean Salad",
+    "source": "https://carlsbadcravings.com/mediterranean-salad/",
+    "image": "images/mediterranean-salad.jpg",
+    "ingredients": [
+      {
+        "name": "SALAD",
+        "items": [
+          "1 large head Romaine lettuce or 2 medium, (chopped (about 8 cups))",
+          "1 pint cherry tomatoes, (halved)",
+          "1 cup sliced Persian cucumbers (or English cucumber)",
+          "3/4 cup sliced pepperoncini, (drained)",
+          "1/2 cup thinly sliced red onion",
+          "1/2 cup pitted Kalamata olives",
+          "1/2 cup crumbled feta cheese",
+          "1 cup garlic herb croutons",
+          "freshly cracked black pepper (to taste)"
+        ]
+      },
+      {
+        "name": "Creamy Mediterranean Salad Dressing",
+        "items": [
+          "1/2 cup Greek yogurt",
+          "1/4 cup mayonnaise (may sub yogurt)",
+          "3 tablespoons extra-virgin olive oil",
+          "2 tablespoons red wine vinegar",
+          "1-2 tablespoons lemon juice",
+          "1 tsp EACH dried parsley, dried dill, dried basil",
+          "1/2 tsp EACH garlic powder, onion powder, dried oregano, paprika, salt",
+          "1/4 teaspoon pepper",
+          "2 tablespoons grated parmesan cheese (like powder)"
+        ]
+      }
+    ],
+    "instructions": [
+      {
+        "name": "",
+        "steps": [
+          "Make the Dressing: Whisk the ingredients together in a medium bowl. Add olive oil as needed to reach the desired consistency. The dressing is best if chilled for at least 30 minutes before serving. After chilling, adjust to taste with red wine vinegar for a tangier taste or a touch of sugar for a less tangy taste.",
+          "Assemble: Add the Romaine lettuce to a large bowl, then top with the salad ingredients. Hold the croutons if expecting leftovers.",
+          "Add the Dressing: If you're not expecting leftovers, drizzle the salad with the desired amount of dressing and toss. Alternatively, dress individual salads. Dig in!"
+        ]
+      }
+    ],
+    "category": "Vegetarian"
   }
 ]
